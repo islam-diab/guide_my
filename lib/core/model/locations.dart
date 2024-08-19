@@ -3,7 +3,7 @@ part 'locations.g.dart';
 
 @JsonSerializable()
 class Location {
-  final int categoryId;
+  final int setionsId;
   final int locationId;
   final String name;
   final String contactInfo;
@@ -13,7 +13,7 @@ class Location {
   Location({
     required this.locationId,
     required this.name,
-    required this.categoryId,
+    required this.setionsId,
     required this.contactInfo,
     required this.rating,
     required this.coordinate,
