@@ -1,21 +1,32 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:guide_my/features/home/ui/home_view.dart';
+import 'package:guide_my/core/routing/app_router.dart';
+import 'package:guide_my/core/routing/routes.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(MyApp(
+    appRouter: AppRouter(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AppRouter appRouter;
 
-  // This widget is the root of your application.
+  const MyApp({super.key, required this.appRouter});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      initialRoute: Routes.authScreen,
+      onGenerateRoute: appRouter.generateRoute,
     );
   }
 }

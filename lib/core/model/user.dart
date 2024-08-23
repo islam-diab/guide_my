@@ -1,20 +1,34 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'user.g.dart';
 
 @JsonSerializable()
-class User {
-  final int userId;
-  final String userName;
+class UserModel {
+  final String id;
+  final String? name;
+  final String? email;
+  final String? photoURL;
   final bool isOwner;
 
-  User({
-    required this.userId,
-    required this.userName,
-    required this.isOwner,
+  UserModel({
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.photoURL,
+    this.isOwner = false,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$UserToJson(this);
+  // Factory method to create a UserModel from Firebase User object
+  factory UserModel.fromFirebaseUser(User user) {
+    return UserModel(
+      id: user.uid,
+      name: user.displayName,
+      email: user.email,
+      photoURL: user.photoURL,
+    );
+  }
 }

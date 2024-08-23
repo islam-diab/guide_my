@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "83304309672",
+    "project_id": "note-mate-07",
+    "storage_bucket": "note-mate-07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83304309672:android:41d469e6dde2b99b43f39d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_note_mate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83304309672-ojm5e2772qjlspmpr0uu5knq7shsqcn1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_note_mate",
+            "certificate_hash": "af5f5bd4d2c7bb97c385e782d53b3666d455098a"
+          }
+        },
+        {
+          "client_id": "83304309672-v5thg6q5ef5fr94nv5en79vedkv3gsn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXsolmajIryoPG6fHvMXejjZhl2LV3NEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83304309672-6ht15qahtcnbj0up347pdepem39gdop8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "83304309672-b5jr1rmb1uen6g4fmo3td4tkm61uohs6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.guideMy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83304309672:android:736ebb483a598d9743f39d",
+        "android_client_info": {
+          "package_name": "com.example.guide_my"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83304309672-t3vqkf92qbk4ljuf3spblfapmrb7fgsa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.guide_my",
+            "certificate_hash": "af5f5bd4d2c7bb97c385e782d53b3666d455098a"
+          }
+        },
+        {
+          "client_id": "83304309672-v5thg6q5ef5fr94nv5en79vedkv3gsn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXsolmajIryoPG6fHvMXejjZhl2LV3NEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83304309672-6ht15qahtcnbj0up347pdepem39gdop8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "83304309672-b5jr1rmb1uen6g4fmo3td4tkm61uohs6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.guideMy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
