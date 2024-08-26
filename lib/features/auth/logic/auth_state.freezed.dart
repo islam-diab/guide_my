@@ -20,21 +20,21 @@ mixin _$AuthState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String error) error,
-    required TResult Function(T data) success,
+    required TResult Function() success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String error)? error,
-    TResult? Function(T data)? success,
+    TResult? Function()? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String error)? error,
-    TResult Function(T data)? success,
+    TResult Function()? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,7 +120,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String error) error,
-    required TResult Function(T data) success,
+    required TResult Function() success,
   }) {
     return initial();
   }
@@ -130,7 +130,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String error)? error,
-    TResult? Function(T data)? success,
+    TResult? Function()? success,
   }) {
     return initial?.call();
   }
@@ -140,7 +140,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String error)? error,
-    TResult Function(T data)? success,
+    TResult Function()? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -254,7 +254,7 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String error) error,
-    required TResult Function(T data) success,
+    required TResult Function() success,
   }) {
     return error(this.error);
   }
@@ -264,7 +264,7 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String error)? error,
-    TResult? Function(T data)? success,
+    TResult? Function()? success,
   }) {
     return error?.call(this.error);
   }
@@ -274,7 +274,7 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String error)? error,
-    TResult Function(T data)? success,
+    TResult Function()? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -332,8 +332,6 @@ abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
           _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
       __$$SuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({T data});
 }
 
 /// @nodoc
@@ -343,60 +341,35 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? data = freezed,
-  }) {
-    return _then(_$SuccessImpl<T>(
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$SuccessImpl<T> implements Success<T> {
-  const _$SuccessImpl({required this.data});
-
-  @override
-  final T data;
+  const _$SuccessImpl();
 
   @override
   String toString() {
-    return 'AuthState<$T>.success(data: $data)';
+    return 'AuthState<$T>.success()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+        (other.runtimeType == runtimeType && other is _$SuccessImpl<T>);
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
-      __$$SuccessImplCopyWithImpl<T, _$SuccessImpl<T>>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String error) error,
-    required TResult Function(T data) success,
+    required TResult Function() success,
   }) {
-    return success(data);
+    return success();
   }
 
   @override
@@ -404,9 +377,9 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String error)? error,
-    TResult? Function(T data)? success,
+    TResult? Function()? success,
   }) {
-    return success?.call(data);
+    return success?.call();
   }
 
   @override
@@ -414,11 +387,11 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String error)? error,
-    TResult Function(T data)? success,
+    TResult Function()? success,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(data);
+      return success();
     }
     return orElse();
   }
@@ -459,10 +432,5 @@ class _$SuccessImpl<T> implements Success<T> {
 }
 
 abstract class Success<T> implements AuthState<T> {
-  const factory Success({required final T data}) = _$SuccessImpl<T>;
-
-  T get data;
-  @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory Success() = _$SuccessImpl<T>;
 }

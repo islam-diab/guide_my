@@ -13,34 +13,39 @@ class AuthBlocListener extends StatelessWidget {
     return BlocListener<AuthCubit, AuthState>(
       listenWhen: (previous, current) => current is Success || current is Error,
       listener: (context, state) {
-        state.whenOrNull(success: (data) {
-          context.pushNamedAndRemoveUntil(Routes.homeScreen,
-              predicate: (_) => false);
-        }, error: (error) {
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              icon: const Icon(
-                Icons.error,
-                color: Colors.red,
-                size: 32,
-              ),
-              content: Text(
-                error,
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    context.pop();
-                  },
-                  child: const Text(
-                    'Got it',
-                  ),
+        state.whenOrNull(
+          success: () {
+            context.pushNamedAndRemoveUntil(
+              Routes.appScreen,
+              predicate: (_) => false,
+            );
+          },
+          error: (error) {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                icon: const Icon(
+                  Icons.error,
+                  color: Colors.red,
+                  size: 32,
                 ),
-              ],
-            ),
-          );
-        });
+                content: Text(
+                  error,
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      context.pop();
+                    },
+                    child: const Text(
+                      'Got it',
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
       },
       child: const SizedBox.shrink(),
     );
