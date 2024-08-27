@@ -4,11 +4,10 @@ class ProfileMenu extends StatelessWidget {
   const ProfileMenu({
     super.key,
     required this.text,
-    required this.icon,
     this.press,
   });
 
-  final String text, icon;
+  final String text;
   final VoidCallback? press;
 
   @override
@@ -26,12 +25,7 @@ class ProfileMenu extends StatelessWidget {
         onPressed: press,
         child: Row(
           children: [
-            SvgPicture.asset(
-              icon,
-              colorFilter:
-                  const ColorFilter.mode(Color(0xFFFF7643), BlendMode.srcIn),
-              width: 22,
-            ),
+           
             const SizedBox(width: 20),
             Expanded(
               child: Text(
