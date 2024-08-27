@@ -12,4 +12,6 @@ class HiveKeys {
 
 class FirebaseKeys {
   static const String users = 'guideMyUsers';
+
+  static const String category = 'category';
 }

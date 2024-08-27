@@ -23,7 +23,7 @@ class AppRouter {
       case Routes.appScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => AppCubit()..userInfo(),
+            create: (context) => AppCubit()..getCategories(),
             child: const AppView(),
           ),
         );

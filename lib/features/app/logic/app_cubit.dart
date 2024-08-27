@@ -2,18 +2,35 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/core/helper/app_assets.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
+import 'package:guide_my/core/model/api_result.dart';
 import 'package:guide_my/core/model/app_user.dart';
+import 'package:guide_my/features/app/data/app_repositories.dart';
 import 'package:guide_my/features/app/logic/app_state.dart';
 import 'package:guide_my/features/app/ui/home/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super(const AppState.initial());
+  final AppRepository appRepository = AppRepository();
+  List<CategoryModel> category = [];
   Box<AppUser> userBox = Hive.box<AppUser>(HiveKeys.appUser);
   String name = '';
   String firstName = '';
   String email = '';
   String photoURL = '';
+
+  void getCategories() async {
+    emit(const AppState.categoryLoading());
+    ApiResult result = await appRepository.getCategoriesFromFirebase();
+    category = result.value;
+
+    if (result.isError) {
+      emit(AppState.catregoryError(result.value));
+    } else {
+      emit(AppState.categorySuccess(result.value));
+    }
+    userInfo();
+  }
 
   void userInfo() async {
     AppUser user = userBox.get(HiveKeys.appUser)!;
@@ -26,7 +43,9 @@ class AppCubit extends Cubit<AppState> {
     List<String> words = name.split(' ');
 
     firstName = words.isNotEmpty ? words[0] : '';
-    await fackeCategoryModel();
+
+    //TODO use this function when updata category
+    // await fackeCategoryModel();
   }
 
   Future<void> fackeCategoryModel() async {
@@ -78,7 +97,9 @@ class AppCubit extends Cubit<AppState> {
           image: AppAssets.doctor),
     ];
     for (var category in list) {
-      var doc = firestore.collection('category').doc(category.id.toString());
+      var doc = firestore
+          .collection(FirebaseKeys.category)
+          .doc(category.id.toString());
       await doc.set(category.toJson());
     }
   }

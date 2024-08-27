@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:guide_my/core/helper/app_assets.dart';
+import 'package:guide_my/core/helper/spase.dart';
+import 'package:guide_my/core/theming/app_color.dart';
+import 'package:guide_my/core/theming/app_text_styles.dart';
 import 'package:guide_my/core/widget/text_form_field.dart';
-import 'package:guide_my/features/app/ui/home/widget/home_container_blue.dart';
+import 'package:guide_my/features/app/ui/home/model/category_model.dart';
+import 'package:guide_my/features/app/ui/home/widget/category/categories_bloc_builder.dart';
+import 'package:guide_my/features/app/ui/home/widget/home_container.dart';
+
+part 'widget/category/categories_list_view_item.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -19,6 +29,8 @@ class HomeView extends StatelessWidget {
                 textInputAction: TextInputAction.search,
               ),
               const HomeContainer(),
+              verticalSpace(30),
+              const CategoryBlocBuilder(),
             ],
           ),
         ),
