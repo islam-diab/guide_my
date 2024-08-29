@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/core/routing/routes.dart';
 import 'package:guide_my/features/auth/ui/auth_view.dart';
-import 'package:guide_my/features/app/logic/app_cubit.dart';
+import 'package:guide_my/features/home/logic/app_cubit.dart';
 import 'package:guide_my/features/app/ui/app_view.dart';
 
 import '../../features/auth/logic/auth_cubit.dart';

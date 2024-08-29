@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:guide_my/features/app/ui/home/home_view.dart';
-import 'package:guide_my/features/app/ui/home/model/category_model.dart';
+import 'package:guide_my/features/home/home_view.dart';
+import 'package:guide_my/features/home/data/model/category_model.dart';
 
 class CategoriesListView extends StatefulWidget {
   final List<CategoryModel?> categoriesData;
@@ -21,6 +21,7 @@ class _CategoriesListViewState extends State<CategoriesListView> {
           height: 100.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            
             itemCount: widget.categoriesData.length,
             itemBuilder: (covariant, index) {
               return GestureDetector(

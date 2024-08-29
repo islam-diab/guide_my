@@ -33,13 +33,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: true,
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            useMaterial3: true,
+          ),
+          initialRoute: _checkIfUserIsLoggedIn(),
+          onGenerateRoute: appRouter.generateRoute,
         ),
-        initialRoute: _checkIfUserIsLoggedIn(),
-        onGenerateRoute: appRouter.generateRoute,
       ),
     );
   }

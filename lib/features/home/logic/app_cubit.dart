@@ -4,10 +4,11 @@ import 'package:guide_my/core/helper/app_assets.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/model/api_result.dart';
 import 'package:guide_my/core/model/app_user.dart';
-import 'package:guide_my/features/app/data/app_repositories.dart';
-import 'package:guide_my/features/app/logic/app_state.dart';
-import 'package:guide_my/features/app/ui/home/model/category_model.dart';
+import 'package:guide_my/features/home/data/app_repositories.dart';
+import 'package:guide_my/features/home/logic/app_state.dart';
+import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super(const AppState.initial());
@@ -27,9 +28,39 @@ class AppCubit extends Cubit<AppState> {
     if (result.isError) {
       emit(AppState.catregoryError(result.value));
     } else {
+      getPositions();
       emit(AppState.categorySuccess(result.value));
     }
     userInfo();
+  }
+
+  void getPositions() async {
+    emit(const AppState.categoryLoading());
+
+    ApiResult result = await appRepository.getPositionsFromFirebase();
+
+    if (result.isError) {
+      emit(AppState.positionError(result.value));
+    } else {
+      emit(AppState.positionSuccess(result.value));
+    }
+  }
+
+  void openWhatsApp(String phoneNumber) async {
+    // Create the WhatsApp URL without a message
+    String whatsappUrl = "whatsapp://send?phone=$phoneNumber";
+    launchUrl(Uri.parse(whatsappUrl));
+  }
+
+  void openCall(String phoneNumber) async {
+    String callNumber = "tel://$phoneNumber";
+    launchUrl(Uri.parse(callNumber));
+  }
+
+  opemLocation() async {
+    String googleMapUrl =
+        "https://www.google.com/maps/place/El+Araby+Medical+Center+Hospital/@30.0653918,31.2436546,38m/data=!3m1!1e3!4m6!3m5!1s0x1458406934eccc41:0x8c56f9f8f77f5ac0!8m2!3d30.0653941!4d31.2436099!16s%2Fg%2F1tyh4ns7?entry=ttu&g_ep=EgoyMDI0MDgyMy4wIKXMDSoASAFQAw%3D%3D";
+    launchUrl(Uri.parse(googleMapUrl));
   }
 
   void userInfo() async {

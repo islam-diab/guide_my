@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:guide_my/features/app/logic/app_cubit.dart';
-import 'package:guide_my/features/app/logic/app_state.dart';
-import 'package:guide_my/features/app/ui/home/model/category_model.dart';
-import 'package:guide_my/features/app/ui/home/widget/category/categories_list_view.dart';
+import 'package:guide_my/features/home/logic/app_cubit.dart';
+import 'package:guide_my/features/home/logic/app_state.dart';
+import 'package:guide_my/features/home/data/model/category_model.dart';
+import 'package:guide_my/features/home/widget/category/categories_list_view.dart';
 
 class CategoryBlocBuilder extends StatelessWidget {
   const CategoryBlocBuilder({super.key});

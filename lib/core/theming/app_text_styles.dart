@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/theming/app_color.dart';
 
 class AppTextStyles {
@@ -19,7 +20,7 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
-   static TextStyle font18DarkWhiteNormal = const TextStyle(
+  static TextStyle font18DarkWhiteNormal = const TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.normal,
     color: Colors.white,
@@ -34,5 +35,16 @@ class AppTextStyles {
     fontSize: 11,
     fontWeight: FontWeight.normal,
     color: Colors.green.shade700,
+  );
+
+  static TextStyle font16DarkBlueBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle font14GrayMedium = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors.grey,
   );
 }

@@ -28,6 +28,8 @@ dependencies:
 
   flutter_svg: ^2.0.10+1
 
+  url_launcher: ^6.3.0
+
   flutter_screenutil: ^5.9.3
 
   hive: ^2.2.3
@@ -62,6 +64,7 @@ flutter:
   assets:
     - assets/auth/google_svg.svg
     - assets/app/
+    - assets/app/phone.png
     - assets/categories/
   #   - images/a_dot_ham.jpeg
 

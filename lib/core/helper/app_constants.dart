@@ -14,4 +14,6 @@ class FirebaseKeys {
   static const String users = 'guideMyUsers';
 
   static const String category = 'category';
+
+  static const String position = 'position';
 }
