@@ -31,10 +31,9 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle font11GrayRegular = TextStyle(
-    fontSize: 11,
+  static TextStyle font12GrayRegular = TextStyle(
+    fontSize: 12.sp,
     fontWeight: FontWeight.normal,
-    color: Colors.green.shade700,
   );
 
   static TextStyle font16DarkBlueBold = TextStyle(
