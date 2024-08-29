@@ -38,7 +38,7 @@ class HomeContainer extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   child: Text(
-                    'Find Nearby',
+                    'Add location',
                     style: AppTextStyles.font12GrayRegular,
                   ),
                 ),
