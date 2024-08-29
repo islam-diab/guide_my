@@ -1,21 +1,61 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:guide_my/features/home/ui/home_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:guide_my/core/helper/app_constants.dart';
+import 'package:guide_my/core/model/app_user.dart';
+import 'package:guide_my/core/routing/app_router.dart';
+import 'package:guide_my/core/routing/routes.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(AppUserAdapter());
+  await Hive.openBox<AppUser>(HiveKeys.appUser);
+
+  runApp(MyApp(
+    appRouter: AppRouter(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AppRouter appRouter;
 
-  // This widget is the root of your application.
+  const MyApp({super.key, required this.appRouter});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            useMaterial3: true,
+          ),
+          initialRoute: _checkIfUserIsLoggedIn(),
+          onGenerateRoute: appRouter.generateRoute,
+        ),
       ),
-      home: const HomeView(),
     );
+  }
+}
+
+String _checkIfUserIsLoggedIn() {
+  final FirebaseAuth auth = FirebaseAuth.instance;
+  User? user = auth.currentUser;
+  if (user != null) {
+    // User is signed in
+    return Routes.appScreen;
+  } else {
+    // No user is signed in
+    return Routes.authScreen;
   }
 }

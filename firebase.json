@@ -1,1 +1,1 @@
-{"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"note-mate-07","configurations":{"ios":"1:83304309672:ios:74cd904f6119db6143f39d"}}}}}}
+{"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"note-mate-07","configurations":{"android":"1:83304309672:android:736ebb483a598d9743f39d","ios":"1:83304309672:ios:31831ad1d23a398943f39d"}}},"android":{"default":{"projectId":"note-mate-07","appId":"1:83304309672:android:736ebb483a598d9743f39d","fileOutput":"android/app/google-services.json"}}}}}
