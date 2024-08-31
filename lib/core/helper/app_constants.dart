@@ -8,6 +8,8 @@ class SharedPreferencesKeys{
 
 class HiveKeys {
   static const String appUser = 'appUser';
+
+  static const String category = 'category';
 }
 
 class FirebaseKeys {

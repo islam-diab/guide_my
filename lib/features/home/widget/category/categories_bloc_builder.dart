@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/features/home/logic/app_cubit.dart';
 import 'package:guide_my/features/home/logic/app_state.dart';
-import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:guide_my/features/home/widget/category/categories_list_view.dart';
 
 class CategoryBlocBuilder extends StatelessWidget {
@@ -19,8 +18,8 @@ class CategoryBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           categoryLoading: () => const Text("loading..."),
-          categorySuccess: (categoryModel) {
-            return setupSucces(categoryModel);
+          categorySuccess: () {
+            return setupSucces();
           },
           catregoryError: (error) => Text(error),
           orElse: () {
@@ -31,9 +30,7 @@ class CategoryBlocBuilder extends StatelessWidget {
     );
   }
 
-  Widget setupSucces(List<CategoryModel?>? categorylist) {
-    return CategoriesListView(
-      categoriesData: categorylist ?? [],
-    );
+  Widget setupSucces() {
+    return const CategoriesListView();
   }
 }

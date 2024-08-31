@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/helper/app_assets.dart';
+import 'package:guide_my/core/helper/extensions.dart';
+import 'package:guide_my/core/routing/routes.dart';
 import 'package:guide_my/core/theming/app_text_styles.dart';
 
 class HomeContainer extends StatelessWidget {
@@ -30,16 +32,18 @@ class HomeContainer extends StatelessWidget {
               children: [
                 Text(
                   'Find trusted service providers, \ndoctors and restaurants \nnear you with ease.',
-                  style: AppTextStyles.font18DarkWhiteNormal,
+                  style: AppTextStyles.font18WhiteNormal,
                 ),
                 const Expanded(
                   child: SizedBox(),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.addLocationScreen);
+                  },
                   child: Text(
                     'Add location',
-                    style: AppTextStyles.font12GrayRegular,
+                    style: AppTextStyles.font12Regular,
                   ),
                 ),
               ],

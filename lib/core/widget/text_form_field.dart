@@ -15,7 +15,7 @@ class AppTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool isObscureText;
   final TextInputType? keyboardType;
-  final TextInputAction textInputAction;
+  final TextInputAction? textInputAction;
   final Function(String?)? validator;
   final TextEditingController controller;
 
@@ -30,7 +30,7 @@ class AppTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.onTap,
     this.keyboardType,
-    required this.textInputAction,
+    this.textInputAction,
     this.maxLine = 1,
     this.onChanged,
     this.onFieldSubmitted,
@@ -58,11 +58,13 @@ class AppTextFormField extends StatelessWidget {
           textInputAction: textInputAction,
           style: AppTextStyles.font18DarkBlueBold,
           decoration: InputDecoration(
-            fillColor: Colors.grey.withOpacity(0.1),
-            filled: true,
             isDense: true,
             hintStyle: AppTextStyles.font16SemiBold,
             hintText: hintText,
+            label: Text(
+              hintText ?? '',
+              style: AppTextStyles.font16RegularPrimary,
+            ),
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             contentPadding: EdgeInsets.symmetric(
@@ -92,7 +94,7 @@ class AppTextFormField extends StatelessWidget {
             ),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                color: const Color(0xFFEDEDED),
+                color: Colors.black,
                 width: 1.3.w,
               ),
               borderRadius: BorderRadius.circular(16.0),

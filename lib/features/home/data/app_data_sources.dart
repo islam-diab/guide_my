@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/model/api_result.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
-import 'package:guide_my/features/home/data/model/position_model.dart';
+import 'package:guide_my/features/home/data/model/location_model.dart';
 
 class FirebaseAppDataSource {
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -30,8 +30,8 @@ class FirebaseAppDataSource {
 
     try {
       QuerySnapshot snapshot = await positionCollection.get();
-      List<PositionModel> positions = snapshot.docs.map((doc) {
-        return PositionModel.fromJson(doc.data() as Map<String, dynamic>);
+      List<LocationModel> positions = snapshot.docs.map((doc) {
+        return LocationModel.fromJson(doc.data() as Map<String, dynamic>);
       }).toList();
       return ApiResult(value: positions, isError: false);
     } catch (e) {

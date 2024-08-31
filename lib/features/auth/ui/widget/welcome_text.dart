@@ -6,13 +6,13 @@ class WelcomeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
-      text: const TextSpan(
+      text: TextSpan(
         children: [
           TextSpan(
             text: "Welcome to ",
-            style: AppTextStyles.font30SemiBoldBlack,
+            style: AppTextStyles.font18WhiteNormal,
           ),
-          TextSpan(
+          const TextSpan(
             text: "Guide My!",
             style: AppTextStyles.font30SemiBoldPurple,
           ),

@@ -5,11 +5,11 @@ import 'package:guide_my/core/helper/app_assets.dart';
 import 'package:guide_my/core/helper/spase.dart';
 import 'package:guide_my/core/theming/app_text_styles.dart';
 import 'package:guide_my/core/widget/image_bottom.dart';
-import 'package:guide_my/features/home/data/model/position_model.dart';
+import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/home/logic/app_cubit.dart';
 
 class PositionListViewItem extends StatelessWidget {
-  final PositionModel positionModel;
+  final LocationModel positionModel;
   const PositionListViewItem({super.key, required this.positionModel});
 
   @override

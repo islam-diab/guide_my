@@ -28,6 +28,8 @@ dependencies:
 
   flutter_svg: ^2.0.10+1
 
+  dropdown_button2: ^2.3.9
+
   url_launcher: ^6.3.0
 
   flutter_screenutil: ^5.9.3
