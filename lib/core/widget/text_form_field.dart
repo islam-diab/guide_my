@@ -16,7 +16,7 @@ class AppTextFormField extends StatelessWidget {
   final bool isObscureText;
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
-  final Function(String?)? validator;
+  final String? Function(String?)? validator;
   final TextEditingController controller;
 
   const AppTextFormField({
@@ -46,12 +46,7 @@ class AppTextFormField extends StatelessWidget {
           onFieldSubmitted: onFieldSubmitted,
           maxLines: maxLine,
           readOnly: readOnly,
-          validator: (value) {
-            if (validator != null) {
-              return validator!(value);
-            }
-            return null;
-          },
+          validator: validator,
           controller: controller,
           keyboardType: keyboardType,
           obscureText: isObscureText,

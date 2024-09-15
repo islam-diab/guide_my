@@ -1,7 +1,11 @@
 part of '../add_location_screen.dart';
 
 class AppDropdownButton extends StatefulWidget {
-  const AppDropdownButton({super.key});
+  final String? Function(String?)? validator;
+  const AppDropdownButton({
+    super.key,
+    this.validator,
+  });
 
   @override
   State<AppDropdownButton> createState() => _AppDropdownButtonState();
@@ -9,11 +13,9 @@ class AppDropdownButton extends StatefulWidget {
 
 class _AppDropdownButtonState extends State<AppDropdownButton> {
   String? selectedValue;
-  final TextEditingController textEditingController = TextEditingController();
 
   @override
   void dispose() {
-    textEditingController.dispose();
     super.dispose();
   }
 
@@ -32,11 +34,19 @@ class _AppDropdownButtonState extends State<AppDropdownButton> {
         child: DropdownButtonFormField2<String>(
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.symmetric(vertical: 16),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.black,
+                width: 1.3.w,
+              ),
+              borderRadius: BorderRadius.circular(16.0),
+            ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
             ),
           ),
-          isExpanded: true,
+          // isExpanded: true,
+          validator: widget.validator,
           hint: Text(
             'Select Item',
             style: AppTextStyles.font16RegularPrimary,
@@ -56,12 +66,14 @@ class _AppDropdownButtonState extends State<AppDropdownButton> {
           onChanged: (value) {
             setState(() {
               selectedValue = value;
+              context.read<LocationCubit>().categoryController.text =
+                  selectedValue!;
             });
           },
-          buttonStyleData: ButtonStyleData(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            height: 40.h,
-            width: 200.w,
+          buttonStyleData: const ButtonStyleData(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            height: 40,
+            width: 200,
           ),
           dropdownStyleData: const DropdownStyleData(
             maxHeight: 200,

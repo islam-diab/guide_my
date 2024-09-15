@@ -1,8 +1,21 @@
 part of 'location_cubit.dart';
 
-@freezed
-class LocationState with _$LocationState {
-  const factory LocationState.initial() = _Initial;
+abstract class LocationState {}
 
-  
+class Initial extends LocationState {}
+
+class Loading extends LocationState {}
+
+class Error extends LocationState {
+  final String error;
+
+  Error(this.error);
+}
+
+class Success extends LocationState {}
+
+class UploadImage extends LocationState {
+  final File? image;
+
+  UploadImage(this.image);
 }

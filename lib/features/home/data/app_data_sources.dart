@@ -26,7 +26,7 @@ class FirebaseAppDataSource {
   }
 
   Future<ApiResult> getPositionsFromFirebase() async {
-    final positionCollection = firestore.collection(FirebaseKeys.position);
+    final positionCollection = firestore.collection(FirebaseKeys.location);
 
     try {
       QuerySnapshot snapshot = await positionCollection.get();

@@ -54,7 +54,7 @@ String _checkIfUserIsLoggedIn() {
   User? user = auth.currentUser;
   if (user != null) {
     // User is signed in
-    return Routes.addLocationScreen;
+    return Routes.appScreen;
   } else {
     // No user is signed in
     return Routes.authScreen;

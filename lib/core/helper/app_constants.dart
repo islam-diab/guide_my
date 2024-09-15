@@ -2,7 +2,7 @@ class AppConstants {
   static const String appTitle = 'Guide My';
 }
 
-class SharedPreferencesKeys{
+class SharedPreferencesKeys {
   static const String stateUser = 'stateUser';
 }
 
@@ -17,5 +17,5 @@ class FirebaseKeys {
 
   static const String category = 'category';
 
-  static const String position = 'position';
+  static const String location = 'location';
 }
