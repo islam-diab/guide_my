@@ -7,6 +7,7 @@ import 'package:guide_my/core/theming/app_text_styles.dart';
 import 'package:guide_my/core/widget/image_bottom.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/home/logic/app_cubit.dart';
+import 'package:guide_my/features/home/logic/app_state.dart';
 
 class PositionListViewItem extends StatelessWidget {
   final LocationModel positionModel;
@@ -14,17 +15,25 @@ class PositionListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.read<AppCubit>().getImageUrl(positionModel.image);
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
-            child: Image.network(
-              positionModel.image,
-              height: 110.h,
-              width: 110.w,
-              fit: BoxFit.cover,
+            child: BlocBuilder<AppCubit, AppState>(
+              builder: (context, state) {
+                if (state is ImageSuccess) {
+                  return Image.network(
+                    state.image,
+                    height: 110.h,
+                    width: 110.w,
+                    fit: BoxFit.cover,
+                  );
+                }
+                return Image.asset(AppAssets.doctor);
+              },
             ),
           ),
           horizontalSpace(16),

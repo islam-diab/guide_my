@@ -14,4 +14,6 @@ class AppState with _$AppState {
   const factory AppState.positionError(String error) = PositionError;
   const factory AppState.positionSuccess(List<LocationModel> position) =
       PositionSuccess;
+
+  const factory AppState.imageSuccess(String image) = ImageSuccess;
 }

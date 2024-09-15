@@ -1,3 +1,4 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/model/api_result.dart';
@@ -46,6 +47,13 @@ class AppCubit extends Cubit<AppState> {
     } else {
       emit(AppState.positionSuccess(result.value));
     }
+  }
+
+  Future<void> getImageUrl(String imageUrl) async {
+    final gsReference = FirebaseStorage.instance.refFromURL(imageUrl);
+    String image = await gsReference.getDownloadURL();
+
+    emit(AppState.imageSuccess(image));
   }
 
   void openWhatsApp(String phoneNumber) async {

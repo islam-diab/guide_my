@@ -25,6 +25,8 @@ mixin _$AppState {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +38,8 @@ mixin _$AppState {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +51,8 @@ mixin _$AppState {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +65,8 @@ mixin _$AppState {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +78,8 @@ mixin _$AppState {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +91,8 @@ mixin _$AppState {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,6 +160,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return initial();
   }
@@ -162,6 +176,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return initial?.call();
   }
@@ -176,6 +192,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -194,6 +212,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return initial(this);
   }
@@ -208,6 +228,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return initial?.call(this);
   }
@@ -222,6 +244,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -280,6 +304,8 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return categoryLoading();
   }
@@ -294,6 +320,8 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return categoryLoading?.call();
   }
@@ -308,6 +336,8 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (categoryLoading != null) {
@@ -326,6 +356,8 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return categoryLoading(this);
   }
@@ -340,6 +372,8 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return categoryLoading?.call(this);
   }
@@ -354,6 +388,8 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (categoryLoading != null) {
@@ -438,6 +474,8 @@ class _$CategoryErrorImpl implements CategoryError {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return catregoryError(error);
   }
@@ -452,6 +490,8 @@ class _$CategoryErrorImpl implements CategoryError {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return catregoryError?.call(error);
   }
@@ -466,6 +506,8 @@ class _$CategoryErrorImpl implements CategoryError {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (catregoryError != null) {
@@ -484,6 +526,8 @@ class _$CategoryErrorImpl implements CategoryError {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return catregoryError(this);
   }
@@ -498,6 +542,8 @@ class _$CategoryErrorImpl implements CategoryError {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return catregoryError?.call(this);
   }
@@ -512,6 +558,8 @@ class _$CategoryErrorImpl implements CategoryError {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (catregoryError != null) {
@@ -575,6 +623,8 @@ class _$CategorySuccessImpl implements CategorySuccess {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return categorySuccess();
   }
@@ -589,6 +639,8 @@ class _$CategorySuccessImpl implements CategorySuccess {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return categorySuccess?.call();
   }
@@ -603,6 +655,8 @@ class _$CategorySuccessImpl implements CategorySuccess {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (categorySuccess != null) {
@@ -621,6 +675,8 @@ class _$CategorySuccessImpl implements CategorySuccess {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return categorySuccess(this);
   }
@@ -635,6 +691,8 @@ class _$CategorySuccessImpl implements CategorySuccess {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return categorySuccess?.call(this);
   }
@@ -649,6 +707,8 @@ class _$CategorySuccessImpl implements CategorySuccess {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (categorySuccess != null) {
@@ -707,6 +767,8 @@ class _$PositionLoadingImpl implements PositionLoading {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return positionLoading();
   }
@@ -721,6 +783,8 @@ class _$PositionLoadingImpl implements PositionLoading {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return positionLoading?.call();
   }
@@ -735,6 +799,8 @@ class _$PositionLoadingImpl implements PositionLoading {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (positionLoading != null) {
@@ -753,6 +819,8 @@ class _$PositionLoadingImpl implements PositionLoading {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return positionLoading(this);
   }
@@ -767,6 +835,8 @@ class _$PositionLoadingImpl implements PositionLoading {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return positionLoading?.call(this);
   }
@@ -781,6 +851,8 @@ class _$PositionLoadingImpl implements PositionLoading {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (positionLoading != null) {
@@ -865,6 +937,8 @@ class _$PositionErrorImpl implements PositionError {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return positionError(error);
   }
@@ -879,6 +953,8 @@ class _$PositionErrorImpl implements PositionError {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return positionError?.call(error);
   }
@@ -893,6 +969,8 @@ class _$PositionErrorImpl implements PositionError {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (positionError != null) {
@@ -911,6 +989,8 @@ class _$PositionErrorImpl implements PositionError {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return positionError(this);
   }
@@ -925,6 +1005,8 @@ class _$PositionErrorImpl implements PositionError {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return positionError?.call(this);
   }
@@ -939,6 +1021,8 @@ class _$PositionErrorImpl implements PositionError {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (positionError != null) {
@@ -1036,6 +1120,8 @@ class _$PositionSuccessImpl implements PositionSuccess {
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
     required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
   }) {
     return positionSuccess(position);
   }
@@ -1050,6 +1136,8 @@ class _$PositionSuccessImpl implements PositionSuccess {
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
     TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
   }) {
     return positionSuccess?.call(position);
   }
@@ -1064,6 +1152,8 @@ class _$PositionSuccessImpl implements PositionSuccess {
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
     TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
     if (positionSuccess != null) {
@@ -1082,6 +1172,8 @@ class _$PositionSuccessImpl implements PositionSuccess {
     required TResult Function(PositionLoading value) positionLoading,
     required TResult Function(PositionError value) positionError,
     required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
   }) {
     return positionSuccess(this);
   }
@@ -1096,6 +1188,8 @@ class _$PositionSuccessImpl implements PositionSuccess {
     TResult? Function(PositionLoading value)? positionLoading,
     TResult? Function(PositionError value)? positionError,
     TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
     return positionSuccess?.call(this);
   }
@@ -1110,6 +1204,8 @@ class _$PositionSuccessImpl implements PositionSuccess {
     TResult Function(PositionLoading value)? positionLoading,
     TResult Function(PositionError value)? positionError,
     TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
     if (positionSuccess != null) {
@@ -1126,5 +1222,324 @@ abstract class PositionSuccess implements AppState {
   List<LocationModel> get position;
   @JsonKey(ignore: true)
   _$$PositionSuccessImplCopyWith<_$PositionSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ImageLoadingImplCopyWith<$Res> {
+  factory _$$ImageLoadingImplCopyWith(
+          _$ImageLoadingImpl value, $Res Function(_$ImageLoadingImpl) then) =
+      __$$ImageLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ImageLoadingImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$ImageLoadingImpl>
+    implements _$$ImageLoadingImplCopyWith<$Res> {
+  __$$ImageLoadingImplCopyWithImpl(
+      _$ImageLoadingImpl _value, $Res Function(_$ImageLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ImageLoadingImpl implements ImageLoading {
+  const _$ImageLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AppState.imageLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ImageLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() categoryLoading,
+    required TResult Function(String error) catregoryError,
+    required TResult Function() categorySuccess,
+    required TResult Function() positionLoading,
+    required TResult Function(String error) positionError,
+    required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
+  }) {
+    return imageLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? categoryLoading,
+    TResult? Function(String error)? catregoryError,
+    TResult? Function()? categorySuccess,
+    TResult? Function()? positionLoading,
+    TResult? Function(String error)? positionError,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
+  }) {
+    return imageLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? categoryLoading,
+    TResult Function(String error)? catregoryError,
+    TResult Function()? categorySuccess,
+    TResult Function()? positionLoading,
+    TResult Function(String error)? positionError,
+    TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
+    required TResult orElse(),
+  }) {
+    if (imageLoading != null) {
+      return imageLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(CategoryError value) catregoryError,
+    required TResult Function(CategorySuccess value) categorySuccess,
+    required TResult Function(PositionLoading value) positionLoading,
+    required TResult Function(PositionError value) positionError,
+    required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
+  }) {
+    return imageLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(CategoryError value)? catregoryError,
+    TResult? Function(CategorySuccess value)? categorySuccess,
+    TResult? Function(PositionLoading value)? positionLoading,
+    TResult? Function(PositionError value)? positionError,
+    TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
+  }) {
+    return imageLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(CategoryError value)? catregoryError,
+    TResult Function(CategorySuccess value)? categorySuccess,
+    TResult Function(PositionLoading value)? positionLoading,
+    TResult Function(PositionError value)? positionError,
+    TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
+    required TResult orElse(),
+  }) {
+    if (imageLoading != null) {
+      return imageLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ImageLoading implements AppState {
+  const factory ImageLoading() = _$ImageLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$ImageSuccessImplCopyWith<$Res> {
+  factory _$$ImageSuccessImplCopyWith(
+          _$ImageSuccessImpl value, $Res Function(_$ImageSuccessImpl) then) =
+      __$$ImageSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String image});
+}
+
+/// @nodoc
+class __$$ImageSuccessImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$ImageSuccessImpl>
+    implements _$$ImageSuccessImplCopyWith<$Res> {
+  __$$ImageSuccessImplCopyWithImpl(
+      _$ImageSuccessImpl _value, $Res Function(_$ImageSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? image = null,
+  }) {
+    return _then(_$ImageSuccessImpl(
+      null == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ImageSuccessImpl implements ImageSuccess {
+  const _$ImageSuccessImpl(this.image);
+
+  @override
+  final String image;
+
+  @override
+  String toString() {
+    return 'AppState.imageSuccess(image: $image)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImageSuccessImpl &&
+            (identical(other.image, image) || other.image == image));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, image);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImageSuccessImplCopyWith<_$ImageSuccessImpl> get copyWith =>
+      __$$ImageSuccessImplCopyWithImpl<_$ImageSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() categoryLoading,
+    required TResult Function(String error) catregoryError,
+    required TResult Function() categorySuccess,
+    required TResult Function() positionLoading,
+    required TResult Function(String error) positionError,
+    required TResult Function(List<LocationModel> position) positionSuccess,
+    required TResult Function() imageLoading,
+    required TResult Function(String image) imageSuccess,
+  }) {
+    return imageSuccess(image);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? categoryLoading,
+    TResult? Function(String error)? catregoryError,
+    TResult? Function()? categorySuccess,
+    TResult? Function()? positionLoading,
+    TResult? Function(String error)? positionError,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
+    TResult? Function()? imageLoading,
+    TResult? Function(String image)? imageSuccess,
+  }) {
+    return imageSuccess?.call(image);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? categoryLoading,
+    TResult Function(String error)? catregoryError,
+    TResult Function()? categorySuccess,
+    TResult Function()? positionLoading,
+    TResult Function(String error)? positionError,
+    TResult Function(List<LocationModel> position)? positionSuccess,
+    TResult Function()? imageLoading,
+    TResult Function(String image)? imageSuccess,
+    required TResult orElse(),
+  }) {
+    if (imageSuccess != null) {
+      return imageSuccess(image);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(CategoryError value) catregoryError,
+    required TResult Function(CategorySuccess value) categorySuccess,
+    required TResult Function(PositionLoading value) positionLoading,
+    required TResult Function(PositionError value) positionError,
+    required TResult Function(PositionSuccess value) positionSuccess,
+    required TResult Function(ImageLoading value) imageLoading,
+    required TResult Function(ImageSuccess value) imageSuccess,
+  }) {
+    return imageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(CategoryError value)? catregoryError,
+    TResult? Function(CategorySuccess value)? categorySuccess,
+    TResult? Function(PositionLoading value)? positionLoading,
+    TResult? Function(PositionError value)? positionError,
+    TResult? Function(PositionSuccess value)? positionSuccess,
+    TResult? Function(ImageLoading value)? imageLoading,
+    TResult? Function(ImageSuccess value)? imageSuccess,
+  }) {
+    return imageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(CategoryError value)? catregoryError,
+    TResult Function(CategorySuccess value)? categorySuccess,
+    TResult Function(PositionLoading value)? positionLoading,
+    TResult Function(PositionError value)? positionError,
+    TResult Function(PositionSuccess value)? positionSuccess,
+    TResult Function(ImageLoading value)? imageLoading,
+    TResult Function(ImageSuccess value)? imageSuccess,
+    required TResult orElse(),
+  }) {
+    if (imageSuccess != null) {
+      return imageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ImageSuccess implements AppState {
+  const factory ImageSuccess(final String image) = _$ImageSuccessImpl;
+
+  String get image;
+  @JsonKey(ignore: true)
+  _$$ImageSuccessImplCopyWith<_$ImageSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
