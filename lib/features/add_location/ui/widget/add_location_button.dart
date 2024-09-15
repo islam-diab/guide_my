@@ -8,7 +8,13 @@ class AddLocationButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: 50.h,
-      child: BlocBuilder<LocationCubit, LocationState>(
+      child: BlocConsumer<AddLocationCubit, AddLocationState>(
+        listener: (context, state) {
+          if (state is Success) {
+            context.pushNamedAndRemoveUntil(Routes.homeScreen,
+                predicate: (context) => false);
+          }
+        },
         builder: (context, state) {
           if (state is Loading) {
             return const Center(
@@ -18,12 +24,11 @@ class AddLocationButton extends StatelessWidget {
           return AppOutlineButton(
             onPressed: () {
               if (context
-                  .read<LocationCubit>()
+                  .read<AddLocationCubit>()
                   .formKey
                   .currentState!
                   .validate()) {
-                context.read<LocationCubit>().addLocation();
-                context.pop();
+                context.read<AddLocationCubit>().addLocation();
               }
             },
             isSelected: true,

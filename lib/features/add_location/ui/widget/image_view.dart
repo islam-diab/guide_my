@@ -5,10 +5,10 @@ class ImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<LocationCubit, LocationState>(
+    return BlocBuilder<AddLocationCubit, AddLocationState>(
       builder: (context, state) {
         return GestureDetector(
-          onTap: () => context.read<LocationCubit>().pickImage(),
+          onTap: () => context.read<AddLocationCubit>().pickImage(),
           child: state is UploadImage
               ? CircleAvatar(
                   radius: 40,

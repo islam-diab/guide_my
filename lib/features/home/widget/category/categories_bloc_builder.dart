@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:guide_my/features/home/logic/app_cubit.dart';
-import 'package:guide_my/features/home/logic/app_state.dart';
+import 'package:guide_my/features/home/logic/home_cubit.dart';
+import 'package:guide_my/features/home/logic/home_state.dart';
 import 'package:guide_my/features/home/widget/category/categories_list_view.dart';
 
 class CategoryBlocBuilder extends StatelessWidget {
@@ -9,7 +9,7 @@ class CategoryBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AppCubit, AppState>(
+    return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) {
         return current is CategoryLoading ||
             current is CategorySuccess ||

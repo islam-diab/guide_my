@@ -1,16 +1,15 @@
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/model/api_result.dart';
 import 'package:guide_my/core/model/app_user.dart';
 import 'package:guide_my/features/home/data/app_repositories.dart';
-import 'package:guide_my/features/home/logic/app_state.dart';
+import 'package:guide_my/features/home/logic/home_state.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AppCubit extends Cubit<AppState> {
-  AppCubit() : super(const AppState.initial());
+class HomeCubit extends Cubit<HomeState> {
+  HomeCubit() : super(const HomeState.initial());
   final AppRepository appRepository = AppRepository();
   Box<AppUser> userBox = Hive.box<AppUser>(HiveKeys.appUser);
   String name = '';
@@ -18,11 +17,11 @@ class AppCubit extends Cubit<AppState> {
   String email = '';
   String photoURL = '';
 
-  void getCategories() async {
-    emit(const AppState.categoryLoading());
+  void fetchData() async {
+    emit(const HomeState.categoryLoading());
     ApiResult result = await appRepository.getCategoriesFromFirebase();
     if (result.isError) {
-      emit(AppState.catregoryError(result.value));
+      emit(HomeState.catregoryError(result.value));
     } else {
       var category = Hive.box<CategoryModel>(HiveKeys.category);
       await category.clear();
@@ -32,28 +31,21 @@ class AppCubit extends Cubit<AppState> {
       }
     }
 
-    await getPositions();
+    await getLocations();
     userInfo();
-    emit(const AppState.categorySuccess());
+    emit(const HomeState.categorySuccess());
   }
 
-  Future<void> getPositions() async {
-    emit(const AppState.categoryLoading());
+  Future<void> getLocations() async {
+    emit(const HomeState.categoryLoading());
 
     ApiResult result = await appRepository.getPositionsFromFirebase();
 
     if (result.isError) {
-      emit(AppState.positionError(result.value));
+      emit(HomeState.locationError(result.value));
     } else {
-      emit(AppState.positionSuccess(result.value));
+      emit(HomeState.locationSuccess(result.value));
     }
-  }
-
-  Future<void> getImageUrl(String imageUrl) async {
-    final gsReference = FirebaseStorage.instance.refFromURL(imageUrl);
-    String image = await gsReference.getDownloadURL();
-
-    emit(AppState.imageSuccess(image));
   }
 
   void openWhatsApp(String phoneNumber) async {
@@ -67,7 +59,7 @@ class AppCubit extends Cubit<AppState> {
     launchUrl(Uri.parse(callNumber));
   }
 
-  opemLocation() async {
+  openLocation() async {
     String googleMapUrl = '';
     launchUrl(Uri.parse(googleMapUrl));
   }

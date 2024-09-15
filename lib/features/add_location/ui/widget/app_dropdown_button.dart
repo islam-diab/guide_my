@@ -66,7 +66,7 @@ class _AppDropdownButtonState extends State<AppDropdownButton> {
           onChanged: (value) {
             setState(() {
               selectedValue = value;
-              context.read<LocationCubit>().categoryController.text =
+              context.read<AddLocationCubit>().categoryController.text =
                   selectedValue!;
             });
           },

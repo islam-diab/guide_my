@@ -16,7 +16,7 @@ class AuthBlocListener extends StatelessWidget {
         state.whenOrNull(
           success: () {
             context.pushNamedAndRemoveUntil(
-              Routes.appScreen,
+              Routes.homeScreen,
               predicate: (_) => false,
             );
           },
