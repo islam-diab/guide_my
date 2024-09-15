@@ -2,12 +2,14 @@ class AppConstants {
   static const String appTitle = 'Guide My';
 }
 
-class SharedPreferencesKeys{
+class SharedPreferencesKeys {
   static const String stateUser = 'stateUser';
 }
 
 class HiveKeys {
   static const String appUser = 'appUser';
+
+  static const String category = 'category';
 }
 
 class FirebaseKeys {
@@ -15,5 +17,5 @@ class FirebaseKeys {
 
   static const String category = 'category';
 
-  static const String position = 'position';
+  static const String location = 'location';
 }

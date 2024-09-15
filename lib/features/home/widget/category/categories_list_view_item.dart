@@ -38,7 +38,7 @@ class CategoriesListViewItem extends StatelessWidget {
           verticalSpace(12),
           Text(
             categories?.name ?? 'General',
-            style: AppTextStyles.font12GrayRegular,
+            style: AppTextStyles.font12Regular,
           ),
         ],
       ),

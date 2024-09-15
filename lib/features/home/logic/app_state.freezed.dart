@@ -21,10 +21,10 @@ mixin _$AppState {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,10 +32,10 @@ mixin _$AppState {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,10 +43,10 @@ mixin _$AppState {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -144,10 +144,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
     return initial();
   }
@@ -158,10 +158,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
     return initial?.call();
   }
@@ -172,10 +172,10 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -276,10 +276,10 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
     return categoryLoading();
   }
@@ -290,10 +290,10 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
     return categoryLoading?.call();
   }
@@ -304,10 +304,10 @@ class _$CategoryLoadingImpl implements CategoryLoading {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (categoryLoading != null) {
@@ -434,10 +434,10 @@ class _$CategoryErrorImpl implements CategoryError {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
     return catregoryError(error);
   }
@@ -448,10 +448,10 @@ class _$CategoryErrorImpl implements CategoryError {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
     return catregoryError?.call(error);
   }
@@ -462,10 +462,10 @@ class _$CategoryErrorImpl implements CategoryError {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (catregoryError != null) {
@@ -535,8 +535,6 @@ abstract class _$$CategorySuccessImplCopyWith<$Res> {
   factory _$$CategorySuccessImplCopyWith(_$CategorySuccessImpl value,
           $Res Function(_$CategorySuccessImpl) then) =
       __$$CategorySuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<CategoryModel> category});
 }
 
 /// @nodoc
@@ -546,58 +544,26 @@ class __$$CategorySuccessImplCopyWithImpl<$Res>
   __$$CategorySuccessImplCopyWithImpl(
       _$CategorySuccessImpl _value, $Res Function(_$CategorySuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? category = null,
-  }) {
-    return _then(_$CategorySuccessImpl(
-      null == category
-          ? _value._category
-          : category // ignore: cast_nullable_to_non_nullable
-              as List<CategoryModel>,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$CategorySuccessImpl implements CategorySuccess {
-  const _$CategorySuccessImpl(final List<CategoryModel> category)
-      : _category = category;
-
-  final List<CategoryModel> _category;
-  @override
-  List<CategoryModel> get category {
-    if (_category is EqualUnmodifiableListView) return _category;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_category);
-  }
+  const _$CategorySuccessImpl();
 
   @override
   String toString() {
-    return 'AppState.categorySuccess(category: $category)';
+    return 'AppState.categorySuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CategorySuccessImpl &&
-            const DeepCollectionEquality().equals(other._category, _category));
+        (other.runtimeType == runtimeType && other is _$CategorySuccessImpl);
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_category));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CategorySuccessImplCopyWith<_$CategorySuccessImpl> get copyWith =>
-      __$$CategorySuccessImplCopyWithImpl<_$CategorySuccessImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -605,12 +571,12 @@ class _$CategorySuccessImpl implements CategorySuccess {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
-    return categorySuccess(category);
+    return categorySuccess();
   }
 
   @override
@@ -619,12 +585,12 @@ class _$CategorySuccessImpl implements CategorySuccess {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
-    return categorySuccess?.call(category);
+    return categorySuccess?.call();
   }
 
   @override
@@ -633,14 +599,14 @@ class _$CategorySuccessImpl implements CategorySuccess {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (categorySuccess != null) {
-      return categorySuccess(category);
+      return categorySuccess();
     }
     return orElse();
   }
@@ -693,13 +659,7 @@ class _$CategorySuccessImpl implements CategorySuccess {
 }
 
 abstract class CategorySuccess implements AppState {
-  const factory CategorySuccess(final List<CategoryModel> category) =
-      _$CategorySuccessImpl;
-
-  List<CategoryModel> get category;
-  @JsonKey(ignore: true)
-  _$$CategorySuccessImplCopyWith<_$CategorySuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory CategorySuccess() = _$CategorySuccessImpl;
 }
 
 /// @nodoc
@@ -743,10 +703,10 @@ class _$PositionLoadingImpl implements PositionLoading {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
     return positionLoading();
   }
@@ -757,10 +717,10 @@ class _$PositionLoadingImpl implements PositionLoading {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
     return positionLoading?.call();
   }
@@ -771,10 +731,10 @@ class _$PositionLoadingImpl implements PositionLoading {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (positionLoading != null) {
@@ -901,10 +861,10 @@ class _$PositionErrorImpl implements PositionError {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
     return positionError(error);
   }
@@ -915,10 +875,10 @@ class _$PositionErrorImpl implements PositionError {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
     return positionError?.call(error);
   }
@@ -929,10 +889,10 @@ class _$PositionErrorImpl implements PositionError {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (positionError != null) {
@@ -1003,7 +963,7 @@ abstract class _$$PositionSuccessImplCopyWith<$Res> {
           $Res Function(_$PositionSuccessImpl) then) =
       __$$PositionSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<PositionModel> position});
+  $Res call({List<LocationModel> position});
 }
 
 /// @nodoc
@@ -1023,7 +983,7 @@ class __$$PositionSuccessImplCopyWithImpl<$Res>
       null == position
           ? _value._position
           : position // ignore: cast_nullable_to_non_nullable
-              as List<PositionModel>,
+              as List<LocationModel>,
     ));
   }
 }
@@ -1031,12 +991,12 @@ class __$$PositionSuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$PositionSuccessImpl implements PositionSuccess {
-  const _$PositionSuccessImpl(final List<PositionModel> position)
+  const _$PositionSuccessImpl(final List<LocationModel> position)
       : _position = position;
 
-  final List<PositionModel> _position;
+  final List<LocationModel> _position;
   @override
-  List<PositionModel> get position {
+  List<LocationModel> get position {
     if (_position is EqualUnmodifiableListView) return _position;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_position);
@@ -1072,10 +1032,10 @@ class _$PositionSuccessImpl implements PositionSuccess {
     required TResult Function() initial,
     required TResult Function() categoryLoading,
     required TResult Function(String error) catregoryError,
-    required TResult Function(List<CategoryModel> category) categorySuccess,
+    required TResult Function() categorySuccess,
     required TResult Function() positionLoading,
     required TResult Function(String error) positionError,
-    required TResult Function(List<PositionModel> position) positionSuccess,
+    required TResult Function(List<LocationModel> position) positionSuccess,
   }) {
     return positionSuccess(position);
   }
@@ -1086,10 +1046,10 @@ class _$PositionSuccessImpl implements PositionSuccess {
     TResult? Function()? initial,
     TResult? Function()? categoryLoading,
     TResult? Function(String error)? catregoryError,
-    TResult? Function(List<CategoryModel> category)? categorySuccess,
+    TResult? Function()? categorySuccess,
     TResult? Function()? positionLoading,
     TResult? Function(String error)? positionError,
-    TResult? Function(List<PositionModel> position)? positionSuccess,
+    TResult? Function(List<LocationModel> position)? positionSuccess,
   }) {
     return positionSuccess?.call(position);
   }
@@ -1100,10 +1060,10 @@ class _$PositionSuccessImpl implements PositionSuccess {
     TResult Function()? initial,
     TResult Function()? categoryLoading,
     TResult Function(String error)? catregoryError,
-    TResult Function(List<CategoryModel> category)? categorySuccess,
+    TResult Function()? categorySuccess,
     TResult Function()? positionLoading,
     TResult Function(String error)? positionError,
-    TResult Function(List<PositionModel> position)? positionSuccess,
+    TResult Function(List<LocationModel> position)? positionSuccess,
     required TResult orElse(),
   }) {
     if (positionSuccess != null) {
@@ -1160,10 +1120,10 @@ class _$PositionSuccessImpl implements PositionSuccess {
 }
 
 abstract class PositionSuccess implements AppState {
-  const factory PositionSuccess(final List<PositionModel> position) =
+  const factory PositionSuccess(final List<LocationModel> position) =
       _$PositionSuccessImpl;
 
-  List<PositionModel> get position;
+  List<LocationModel> get position;
   @JsonKey(ignore: true)
   _$$PositionSuccessImplCopyWith<_$PositionSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;

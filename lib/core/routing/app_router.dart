@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/core/routing/routes.dart';
+import 'package:guide_my/features/add_location/logic/location_cubit.dart';
+import 'package:guide_my/features/add_location/ui/add_location_screen.dart';
 import 'package:guide_my/features/auth/ui/auth_view.dart';
 import 'package:guide_my/features/home/logic/app_cubit.dart';
 import 'package:guide_my/features/app/ui/app_view.dart';
@@ -25,6 +27,13 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => AppCubit()..getCategories(),
             child: const AppView(),
+          ),
+        );
+        case Routes.addLocationScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => LocationCubit(),
+            child: const AddLocationScreen(),
           ),
         );
 

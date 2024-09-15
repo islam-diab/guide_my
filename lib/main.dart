@@ -6,6 +6,7 @@ import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/model/app_user.dart';
 import 'package:guide_my/core/routing/app_router.dart';
 import 'package:guide_my/core/routing/routes.dart';
+import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'firebase_options.dart';
@@ -18,6 +19,9 @@ void main() async {
 
   Hive.registerAdapter(AppUserAdapter());
   await Hive.openBox<AppUser>(HiveKeys.appUser);
+
+  Hive.registerAdapter(CategoryModelAdapter());
+  await Hive.openBox<CategoryModel>(HiveKeys.category);
 
   runApp(MyApp(
     appRouter: AppRouter(),
@@ -33,16 +37,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
-      child: Directionality(
-        textDirection: TextDirection.rtl,
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            useMaterial3: true,
-          ),
-          initialRoute: _checkIfUserIsLoggedIn(),
-          onGenerateRoute: appRouter.generateRoute,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
         ),
+        initialRoute: _checkIfUserIsLoggedIn(),
+        onGenerateRoute: appRouter.generateRoute,
       ),
     );
   }

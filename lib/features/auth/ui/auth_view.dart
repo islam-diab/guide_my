@@ -36,7 +36,7 @@ class AuthView extends StatelessWidget {
                 children: [
                   const Text(
                     'Are you',
-                    style: AppTextStyles.font30SemiBoldBlack,
+                    style: AppTextStyles.font30SemiBoldPurple,
                   ),
                   verticalSpace(16),
                   const OwnerOrUser(),
