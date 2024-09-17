@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:guide_my/features/home/home_view.dart';
@@ -14,7 +13,7 @@ class CategoriesListView extends StatefulWidget {
 
 class _CategoriesListViewState extends State<CategoriesListView> {
   List<CategoryModel> categoriesData = [];
-    var category = Hive.box<CategoryModel>(HiveKeys.category);
+  var category = Hive.box<CategoryModel>(HiveKeys.category);
 
   int selectedIndex = 0;
   @override
@@ -23,11 +22,9 @@ class _CategoriesListViewState extends State<CategoriesListView> {
     categoriesData = category.values.toList();
     return Column(
       children: [
-        SizedBox(
-          height: 100.h,
+        Expanded(
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            
             itemCount: categoriesData.length,
             itemBuilder: (covariant, index) {
               return GestureDetector(

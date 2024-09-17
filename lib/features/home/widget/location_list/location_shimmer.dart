@@ -16,7 +16,7 @@ class LocationShimmer extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 16.h),
             child: Row(
               children: [
-                const AppShimmer(height: 110, width: 120, radius: 12),
+                const AppShimmer(height: 110, width: 110, radius: 12),
                 horizontalSpace(16),
                 Expanded(
                   child: Column(
