@@ -6,7 +6,7 @@ class AddLocationForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<LocationCubit>().formKey,
+      key: context.read<AddLocationCubit>().formKey,
       child: Column(
         children: [
           Row(
@@ -28,7 +28,7 @@ class AddLocationForm extends StatelessWidget {
           ),
           verticalSpace(20.h),
           AppTextFormField(
-            controller: context.read<LocationCubit>().nameController,
+            controller: context.read<AddLocationCubit>().nameController,
             hintText: 'Location Name',
             keyboardType: TextInputType.name,
             textInputAction: TextInputAction.next,
@@ -41,7 +41,7 @@ class AddLocationForm extends StatelessWidget {
           ),
           verticalSpace(20.h),
           AppTextFormField(
-            controller: context.read<LocationCubit>().phoneController,
+            controller: context.read<AddLocationCubit>().phoneController,
             hintText: 'Phone',
             keyboardType: TextInputType.phone,
             textInputAction: TextInputAction.next,
@@ -54,7 +54,7 @@ class AddLocationForm extends StatelessWidget {
           ),
           verticalSpace(20.h),
           AppTextFormField(
-            controller: context.read<LocationCubit>().locationController,
+            controller: context.read<AddLocationCubit>().locationController,
             hintText: 'Location Address',
             keyboardType: TextInputType.streetAddress,
             textInputAction: TextInputAction.next,
@@ -67,7 +67,7 @@ class AddLocationForm extends StatelessWidget {
           ),
           verticalSpace(20.h),
           AppTextFormField(
-            controller: context.read<LocationCubit>().mapController,
+            controller: context.read<AddLocationCubit>().mapController,
             hintText: 'Location In Google Maps',
             keyboardType: TextInputType.streetAddress,
             textInputAction: TextInputAction.next,
@@ -80,13 +80,14 @@ class AddLocationForm extends StatelessWidget {
           ),
           verticalSpace(20.h),
           AppTextFormField(
-            controller: context.read<LocationCubit>().descriptionController,
+            controller: context.read<AddLocationCubit>().descriptionController,
             hintText: 'Description',
             keyboardType: TextInputType.streetAddress,
             textInputAction: TextInputAction.done,
           ),
           verticalSpace(50.h),
           const AddLocationButton(),
+       
         ],
       ),
     );

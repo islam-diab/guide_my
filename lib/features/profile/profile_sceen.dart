@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:guide_my/features/home/logic/app_cubit.dart';
+import 'package:guide_my/features/home/logic/home_cubit.dart';
 
 part 'widget/profile_pic.dart';
 part 'widget/profile_menu.dart';

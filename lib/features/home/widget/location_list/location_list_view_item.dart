@@ -6,11 +6,11 @@ import 'package:guide_my/core/helper/spase.dart';
 import 'package:guide_my/core/theming/app_text_styles.dart';
 import 'package:guide_my/core/widget/image_bottom.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
-import 'package:guide_my/features/home/logic/app_cubit.dart';
+import 'package:guide_my/features/home/logic/home_cubit.dart';
 
-class PositionListViewItem extends StatelessWidget {
-  final LocationModel positionModel;
-  const PositionListViewItem({super.key, required this.positionModel});
+class LocationListViewItem extends StatelessWidget {
+  final LocationModel locationModel;
+  const LocationListViewItem({super.key, required this.locationModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class PositionListViewItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.network(
-              positionModel.image,
+              locationModel.image,
               height: 110.h,
               width: 110.w,
               fit: BoxFit.cover,
@@ -33,7 +33,7 @@ class PositionListViewItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  positionModel.name,
+                  locationModel.name,
                   style: AppTextStyles.font16DarkBlueBold,
                 ),
                 verticalSpace(5),
@@ -43,14 +43,15 @@ class PositionListViewItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${positionModel.location} ',
+                        locationModel.location,
                         style: AppTextStyles.font16DarkBlueBold,
                       ),
                       ImageBottom(
-                          onTap: () {
-                            context.read<AppCubit>().opemLocation();
-                          },
-                          image: AppAssets.map)
+                        onTap: () {
+                          context.read<HomeCubit>().openLocation();
+                        },
+                        image: AppAssets.map,
+                      )
                     ],
                   ),
                 ),
@@ -58,25 +59,25 @@ class PositionListViewItem extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      positionModel.phone,
+                      locationModel.phone,
                       style: AppTextStyles.font14GrayMedium,
                     ),
                     const Expanded(child: SizedBox.shrink()),
                     ImageBottom(
-                        onTap: () {
-                          context
-                              .read<AppCubit>()
-                              .openCall(positionModel.phone);
-                        },
-                        image: AppAssets.phone),
+                      onTap: () {
+                        context.read<HomeCubit>().openCall(locationModel.phone);
+                      },
+                      image: AppAssets.phone,
+                    ),
                     horizontalSpace(20),
                     ImageBottom(
-                        onTap: () {
-                          context
-                              .read<AppCubit>()
-                              .openWhatsApp(positionModel.phone);
-                        },
-                        image: AppAssets.whatsapp),
+                      onTap: () {
+                        context
+                            .read<HomeCubit>()
+                            .openWhatsApp(locationModel.phone);
+                      },
+                      image: AppAssets.whatsapp,
+                    ),
                   ],
                 ),
               ],

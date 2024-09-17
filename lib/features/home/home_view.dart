@@ -9,7 +9,7 @@ import 'package:guide_my/core/widget/text_form_field.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:guide_my/features/home/widget/category/categories_bloc_builder.dart';
 import 'package:guide_my/features/home/widget/home_container.dart';
-import 'package:guide_my/features/home/widget/position_list/position_bloc_builder.dart';
+import 'package:guide_my/features/home/widget/location_list/location_bloc_builder.dart';
 
 part 'widget/category/categories_list_view_item.dart';
 
@@ -33,7 +33,7 @@ class HomeView extends StatelessWidget {
               verticalSpace(30),
               const CategoryBlocBuilder(),
               verticalSpace(30),
-              const PositionBlocBuilder(),
+              const LocationBlocBuilder(),
             ],
           ),
         ),
