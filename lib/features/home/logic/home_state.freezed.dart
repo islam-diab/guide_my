@@ -19,10 +19,9 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -32,10 +31,9 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -45,10 +43,9 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -59,10 +56,9 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -72,10 +68,9 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -85,10 +80,9 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -154,10 +148,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -170,10 +163,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -186,10 +178,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -206,10 +197,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -222,10 +212,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -238,10 +227,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -260,35 +248,35 @@ abstract class _Initial implements HomeState {
 }
 
 /// @nodoc
-abstract class _$$CategoryLoadingImplCopyWith<$Res> {
-  factory _$$CategoryLoadingImplCopyWith(_$CategoryLoadingImpl value,
-          $Res Function(_$CategoryLoadingImpl) then) =
-      __$$CategoryLoadingImplCopyWithImpl<$Res>;
+abstract class _$$HomeLoadingImplCopyWith<$Res> {
+  factory _$$HomeLoadingImplCopyWith(
+          _$HomeLoadingImpl value, $Res Function(_$HomeLoadingImpl) then) =
+      __$$HomeLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CategoryLoadingImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$CategoryLoadingImpl>
-    implements _$$CategoryLoadingImplCopyWith<$Res> {
-  __$$CategoryLoadingImplCopyWithImpl(
-      _$CategoryLoadingImpl _value, $Res Function(_$CategoryLoadingImpl) _then)
+class __$$HomeLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$HomeLoadingImpl>
+    implements _$$HomeLoadingImplCopyWith<$Res> {
+  __$$HomeLoadingImplCopyWithImpl(
+      _$HomeLoadingImpl _value, $Res Function(_$HomeLoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CategoryLoadingImpl implements CategoryLoading {
-  const _$CategoryLoadingImpl();
+class _$HomeLoadingImpl implements HomeLoading {
+  const _$HomeLoadingImpl();
 
   @override
   String toString() {
-    return 'HomeState.categoryLoading()';
+    return 'HomeState.homeLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CategoryLoadingImpl);
+        (other.runtimeType == runtimeType && other is _$HomeLoadingImpl);
   }
 
   @override
@@ -298,50 +286,47 @@ class _$CategoryLoadingImpl implements CategoryLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
     required TResult Function(String image) imageSuccess,
   }) {
-    return categoryLoading();
+    return homeLoading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
     TResult? Function(String image)? imageSuccess,
   }) {
-    return categoryLoading?.call();
+    return homeLoading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
     TResult Function(String image)? imageSuccess,
     required TResult orElse(),
   }) {
-    if (categoryLoading != null) {
-      return categoryLoading();
+    if (homeLoading != null) {
+      return homeLoading();
     }
     return orElse();
   }
@@ -350,57 +335,54 @@ class _$CategoryLoadingImpl implements CategoryLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
     required TResult Function(ImageSuccess value) imageSuccess,
   }) {
-    return categoryLoading(this);
+    return homeLoading(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
     TResult? Function(ImageSuccess value)? imageSuccess,
   }) {
-    return categoryLoading?.call(this);
+    return homeLoading?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
     TResult Function(ImageSuccess value)? imageSuccess,
     required TResult orElse(),
   }) {
-    if (categoryLoading != null) {
-      return categoryLoading(this);
+    if (homeLoading != null) {
+      return homeLoading(this);
     }
     return orElse();
   }
 }
 
-abstract class CategoryLoading implements HomeState {
-  const factory CategoryLoading() = _$CategoryLoadingImpl;
+abstract class HomeLoading implements HomeState {
+  const factory HomeLoading() = _$HomeLoadingImpl;
 }
 
 /// @nodoc
@@ -468,10 +450,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -484,10 +465,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -500,10 +480,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -520,10 +499,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -536,10 +514,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -552,10 +529,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -617,10 +593,9 @@ class _$CategorySuccessImpl implements CategorySuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -633,10 +608,9 @@ class _$CategorySuccessImpl implements CategorySuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -649,10 +623,9 @@ class _$CategorySuccessImpl implements CategorySuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -669,10 +642,9 @@ class _$CategorySuccessImpl implements CategorySuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -685,10 +657,9 @@ class _$CategorySuccessImpl implements CategorySuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -701,10 +672,9 @@ class _$CategorySuccessImpl implements CategorySuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -720,150 +690,6 @@ class _$CategorySuccessImpl implements CategorySuccess {
 
 abstract class CategorySuccess implements HomeState {
   const factory CategorySuccess() = _$CategorySuccessImpl;
-}
-
-/// @nodoc
-abstract class _$$LocationLoadingImplCopyWith<$Res> {
-  factory _$$LocationLoadingImplCopyWith(_$LocationLoadingImpl value,
-          $Res Function(_$LocationLoadingImpl) then) =
-      __$$LocationLoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LocationLoadingImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LocationLoadingImpl>
-    implements _$$LocationLoadingImplCopyWith<$Res> {
-  __$$LocationLoadingImplCopyWithImpl(
-      _$LocationLoadingImpl _value, $Res Function(_$LocationLoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LocationLoadingImpl implements LocationLoading {
-  const _$LocationLoadingImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.locationLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LocationLoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() categoryLoading,
-    required TResult Function(String error) catregoryError,
-    required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
-    required TResult Function(String error) locationError,
-    required TResult Function(List<LocationModel> position) locationSuccess,
-    required TResult Function() imageLoading,
-    required TResult Function(String image) imageSuccess,
-  }) {
-    return locationLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
-    TResult? Function(String error)? catregoryError,
-    TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
-    TResult? Function(String error)? locationError,
-    TResult? Function(List<LocationModel> position)? locationSuccess,
-    TResult? Function()? imageLoading,
-    TResult? Function(String image)? imageSuccess,
-  }) {
-    return locationLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? categoryLoading,
-    TResult Function(String error)? catregoryError,
-    TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
-    TResult Function(String error)? locationError,
-    TResult Function(List<LocationModel> position)? locationSuccess,
-    TResult Function()? imageLoading,
-    TResult Function(String image)? imageSuccess,
-    required TResult orElse(),
-  }) {
-    if (locationLoading != null) {
-      return locationLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
-    required TResult Function(CategoryError value) catregoryError,
-    required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
-    required TResult Function(LocationError value) locationError,
-    required TResult Function(LocationSuccess value) locationSuccess,
-    required TResult Function(ImageLoading value) imageLoading,
-    required TResult Function(ImageSuccess value) imageSuccess,
-  }) {
-    return locationLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
-    TResult? Function(CategoryError value)? catregoryError,
-    TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
-    TResult? Function(LocationError value)? locationError,
-    TResult? Function(LocationSuccess value)? locationSuccess,
-    TResult? Function(ImageLoading value)? imageLoading,
-    TResult? Function(ImageSuccess value)? imageSuccess,
-  }) {
-    return locationLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
-    TResult Function(CategoryError value)? catregoryError,
-    TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
-    TResult Function(LocationError value)? locationError,
-    TResult Function(LocationSuccess value)? locationSuccess,
-    TResult Function(ImageLoading value)? imageLoading,
-    TResult Function(ImageSuccess value)? imageSuccess,
-    required TResult orElse(),
-  }) {
-    if (locationLoading != null) {
-      return locationLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LocationLoading implements HomeState {
-  const factory LocationLoading() = _$LocationLoadingImpl;
 }
 
 /// @nodoc
@@ -931,10 +757,9 @@ class _$LocationErrorImpl implements LocationError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -947,10 +772,9 @@ class _$LocationErrorImpl implements LocationError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -963,10 +787,9 @@ class _$LocationErrorImpl implements LocationError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -983,10 +806,9 @@ class _$LocationErrorImpl implements LocationError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -999,10 +821,9 @@ class _$LocationErrorImpl implements LocationError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -1015,10 +836,9 @@ class _$LocationErrorImpl implements LocationError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -1114,10 +934,9 @@ class _$LocationSuccessImpl implements LocationSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -1130,10 +949,9 @@ class _$LocationSuccessImpl implements LocationSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -1146,10 +964,9 @@ class _$LocationSuccessImpl implements LocationSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -1166,10 +983,9 @@ class _$LocationSuccessImpl implements LocationSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -1182,10 +998,9 @@ class _$LocationSuccessImpl implements LocationSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -1198,10 +1013,9 @@ class _$LocationSuccessImpl implements LocationSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -1264,10 +1078,9 @@ class _$ImageLoadingImpl implements ImageLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -1280,10 +1093,9 @@ class _$ImageLoadingImpl implements ImageLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -1296,10 +1108,9 @@ class _$ImageLoadingImpl implements ImageLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -1316,10 +1127,9 @@ class _$ImageLoadingImpl implements ImageLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -1332,10 +1142,9 @@ class _$ImageLoadingImpl implements ImageLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -1348,10 +1157,9 @@ class _$ImageLoadingImpl implements ImageLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,
@@ -1434,10 +1242,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() categoryLoading,
+    required TResult Function() homeLoading,
     required TResult Function(String error) catregoryError,
     required TResult Function() categorySuccess,
-    required TResult Function() locationLoading,
     required TResult Function(String error) locationError,
     required TResult Function(List<LocationModel> position) locationSuccess,
     required TResult Function() imageLoading,
@@ -1450,10 +1257,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? categoryLoading,
+    TResult? Function()? homeLoading,
     TResult? Function(String error)? catregoryError,
     TResult? Function()? categorySuccess,
-    TResult? Function()? locationLoading,
     TResult? Function(String error)? locationError,
     TResult? Function(List<LocationModel> position)? locationSuccess,
     TResult? Function()? imageLoading,
@@ -1466,10 +1272,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? categoryLoading,
+    TResult Function()? homeLoading,
     TResult Function(String error)? catregoryError,
     TResult Function()? categorySuccess,
-    TResult Function()? locationLoading,
     TResult Function(String error)? locationError,
     TResult Function(List<LocationModel> position)? locationSuccess,
     TResult Function()? imageLoading,
@@ -1486,10 +1291,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(CategoryLoading value) categoryLoading,
+    required TResult Function(HomeLoading value) homeLoading,
     required TResult Function(CategoryError value) catregoryError,
     required TResult Function(CategorySuccess value) categorySuccess,
-    required TResult Function(LocationLoading value) locationLoading,
     required TResult Function(LocationError value) locationError,
     required TResult Function(LocationSuccess value) locationSuccess,
     required TResult Function(ImageLoading value) imageLoading,
@@ -1502,10 +1306,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(CategoryLoading value)? categoryLoading,
+    TResult? Function(HomeLoading value)? homeLoading,
     TResult? Function(CategoryError value)? catregoryError,
     TResult? Function(CategorySuccess value)? categorySuccess,
-    TResult? Function(LocationLoading value)? locationLoading,
     TResult? Function(LocationError value)? locationError,
     TResult? Function(LocationSuccess value)? locationSuccess,
     TResult? Function(ImageLoading value)? imageLoading,
@@ -1518,10 +1321,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(CategoryLoading value)? categoryLoading,
+    TResult Function(HomeLoading value)? homeLoading,
     TResult Function(CategoryError value)? catregoryError,
     TResult Function(CategorySuccess value)? categorySuccess,
-    TResult Function(LocationLoading value)? locationLoading,
     TResult Function(LocationError value)? locationError,
     TResult Function(LocationSuccess value)? locationSuccess,
     TResult Function(ImageLoading value)? imageLoading,

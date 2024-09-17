@@ -46,6 +46,8 @@ dependencies:
   json_serializable: ^6.8.0
   build_runner: ^2.4.7
 
+  shimmer: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

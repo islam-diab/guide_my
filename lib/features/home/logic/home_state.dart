@@ -5,12 +5,11 @@ part 'home_state.freezed.dart';
 @freezed
 class HomeState with _$HomeState {
   const factory HomeState.initial() = _Initial;
-  const factory HomeState.categoryLoading() = CategoryLoading;
+  const factory HomeState.homeLoading() = HomeLoading;
 
   const factory HomeState.catregoryError(String error) = CategoryError;
   const factory HomeState.categorySuccess() = CategorySuccess;
 
-  const factory HomeState.locationLoading() = LocationLoading;
   const factory HomeState.locationError(String error) = LocationError;
   const factory HomeState.locationSuccess(List<LocationModel> position) =
       LocationSuccess;

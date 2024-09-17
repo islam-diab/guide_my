@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/features/home/logic/home_cubit.dart';
 import 'package:guide_my/features/home/logic/home_state.dart';
 import 'package:guide_my/features/home/widget/location_list/location_list_view.dart';
+import 'package:guide_my/features/home/widget/location_list/location_shimmer.dart';
 
 class LocationBlocBuilder extends StatelessWidget {
   const LocationBlocBuilder({super.key});
@@ -11,7 +12,9 @@ class LocationBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is LocationSuccess || current is LocationError,
+          current is LocationSuccess ||
+          current is LocationError ||
+          current is HomeLoading,
       builder: (context, state) {
         return state.maybeWhen(
           locationSuccess: (doctorModel) {
@@ -20,8 +23,8 @@ class LocationBlocBuilder extends StatelessWidget {
           locationError: (error) {
             return setupError(error);
           },
-          locationLoading: () {
-            return const Text("loading...");
+          homeLoading: () {
+            return const LocationShimmer();
           },
           orElse: () {
             return setupError('orElse');

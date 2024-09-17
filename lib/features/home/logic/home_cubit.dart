@@ -18,7 +18,7 @@ class HomeCubit extends Cubit<HomeState> {
   String photoURL = '';
 
   void fetchData() async {
-    emit(const HomeState.categoryLoading());
+    emit(const HomeState.homeLoading());
     ApiResult result = await appRepository.getCategoriesFromFirebase();
     if (result.isError) {
       emit(HomeState.catregoryError(result.value));
@@ -37,13 +37,14 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   Future<void> getLocations() async {
-    emit(const HomeState.categoryLoading());
+    emit(const HomeState.homeLoading());
 
     ApiResult result = await appRepository.getPositionsFromFirebase();
 
     if (result.isError) {
       emit(HomeState.locationError(result.value));
     } else {
+    
       emit(HomeState.locationSuccess(result.value));
     }
   }
