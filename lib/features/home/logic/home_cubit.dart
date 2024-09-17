@@ -28,12 +28,12 @@ class HomeCubit extends Cubit<HomeState> {
 
       for (var element in result.value) {
         await category.add(element);
+        emit(const HomeState.homeSuccess([]));
       }
     }
 
     await getLocations();
-    userInfo();
-    emit(const HomeState.categorySuccess());
+    //  userInfo();
   }
 
   Future<void> getLocations() async {
@@ -44,8 +44,8 @@ class HomeCubit extends Cubit<HomeState> {
     if (result.isError) {
       emit(HomeState.locationError(result.value));
     } else {
+      emit(HomeState.homeSuccess(result.value));
     
-      emit(HomeState.locationSuccess(result.value));
     }
   }
 

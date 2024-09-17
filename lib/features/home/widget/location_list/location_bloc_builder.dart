@@ -12,12 +12,12 @@ class LocationBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is LocationSuccess ||
+          current is HomeSuccess ||
           current is LocationError ||
           current is HomeLoading,
       builder: (context, state) {
         return state.maybeWhen(
-          locationSuccess: (doctorModel) {
+          homeSuccess: (doctorModel) {
             return setupSucces(doctorModel);
           },
           locationError: (error) {
@@ -42,5 +42,5 @@ Widget setupSucces(doctorList) {
 }
 
 Widget setupError(String error) {
-  return Text(error);
+  return SliverToBoxAdapter(child: Text(error));
 }

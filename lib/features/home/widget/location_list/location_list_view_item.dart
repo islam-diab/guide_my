@@ -29,12 +29,24 @@ class LocationListViewItem extends StatelessWidget {
                 width: 110,
                 radius: 12,
               ),
-              errorWidget: (context, url, error) => const Icon(Icons.error),
-              imageBuilder: (context, imageProvider) => Image.network(
-                locationModel.image,
+              errorWidget: (context, url, error) => SizedBox(
                 height: 110.h,
                 width: 110.w,
-                fit: BoxFit.cover,
+                child: const Icon(
+                  Icons.error,
+                  color: Colors.red,
+                  size: 70,
+                ),
+              ),
+              imageBuilder: (context, imageProvider) => Container(
+                height: 110.h,
+                width: 110.w,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: imageProvider,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
             ),
           ),

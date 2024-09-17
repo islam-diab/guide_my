@@ -20,22 +20,22 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
-          child: Column(
-            children: [
-              AppTextFormField(
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              pinned: true,
+              floating: false,
+              toolbarHeight: 80.h,
+              title: AppTextFormField(
                 controller: TextEditingController(),
                 hintText: 'Search',
                 textInputAction: TextInputAction.search,
               ),
-              const HomeContainer(),
-              verticalSpace(30),
-              const CategoryBlocBuilder(),
-              verticalSpace(30),
-              const LocationBlocBuilder(),
-            ],
-          ),
+            ),
+            const SliverToBoxAdapter(child: HomeContainer()),
+            const SliverToBoxAdapter(child: CategoryBlocBuilder()),
+            const LocationBlocBuilder(),
+          ],
         ),
       ),
     );

@@ -9,8 +9,9 @@ class LocationListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
+    return SliverPadding(
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+      sliver: SliverList.builder(
         itemCount: locationModel!.length,
         itemBuilder: (context, index) {
           return LocationListViewItem(locationModel: locationModel![index]!);

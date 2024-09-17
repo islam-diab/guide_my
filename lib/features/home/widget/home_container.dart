@@ -10,8 +10,8 @@ class HomeContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 190.h,
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [

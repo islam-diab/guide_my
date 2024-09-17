@@ -38,65 +38,61 @@ class AppTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextFormField(
-          onTap: onTap,
-          onChanged: onChanged,
-          onFieldSubmitted: onFieldSubmitted,
-          maxLines: maxLine,
-          readOnly: readOnly,
-          validator: validator,
-          controller: controller,
-          keyboardType: keyboardType,
-          obscureText: isObscureText,
-          textInputAction: textInputAction,
-          style: AppTextStyles.font18DarkBlueBold,
-          decoration: InputDecoration(
-            isDense: true,
-            hintStyle: AppTextStyles.font16SemiBold,
-            hintText: hintText,
-            label: Text(
-              hintText ?? '',
-              style: AppTextStyles.font16RegularPrimary,
-            ),
-            prefixIcon: prefixIcon,
-            suffixIcon: suffixIcon,
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: 20.w,
-              vertical: 20.h,
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: AppColor.primary,
-                width: 1.3.w,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: Colors.red,
-                width: 1.3,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: Colors.red,
-                width: 1.3,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.black,
-                width: 1.3.w,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-          ),
+    return TextFormField(
+      onTap: onTap,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
+      maxLines: maxLine,
+      readOnly: readOnly,
+      validator: validator,
+      controller: controller,
+      keyboardType: keyboardType,
+      obscureText: isObscureText,
+      textInputAction: textInputAction,
+      style: AppTextStyles.font18DarkBlueBold,
+      decoration: InputDecoration(
+        isDense: true,
+        hintStyle: AppTextStyles.font16SemiBold,
+        hintText: hintText,
+        label: Text(
+          hintText ?? '',
+          style: AppTextStyles.font16RegularPrimary,
         ),
-      ],
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 20.w,
+          vertical: 20.h,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: AppColor.primary,
+            width: 1.3.w,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+            width: 1.3.w,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+      ),
     );
   }
 }

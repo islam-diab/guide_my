@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:guide_my/features/home/home_view.dart';
@@ -22,7 +23,8 @@ class _CategoriesListViewState extends State<CategoriesListView> {
     categoriesData = category.values.toList();
     return Column(
       children: [
-        Expanded(
+        SizedBox(
+          height: 90.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: categoriesData.length,
