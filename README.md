@@ -1,6 +1,6 @@
 # guide_my
 
-A new Flutter project.
+"Guide My" is an application designed to help users discover and explore local places. It offers personalized recommendations for restaurants, tourist attractions, shops, and more. 
 
 ## Getting Started
 
