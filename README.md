@@ -2,7 +2,7 @@
 
 "Guide My" is an application designed to help users discover and explore local places. It offers personalized recommendations for restaurants, tourist attractions, shops, and more. 
 
-![Frame 1441](https://github.com/user-attachments/assets/a6e00200-b8b3-4958-a593-43d1fa1a0f12)
+<img width="595" alt="1" src="https://github.com/user-attachments/assets/150b06b6-c034-4e8c-8197-af35a5133a70">
 
 
 ## Getting Started
