@@ -11,6 +11,3 @@
 - **Customizable Categories**: Choose from a variety of categories such as dining, shopping, entertainment, etc.
 - **User Reviews & Ratings**: Access and contribute reviews and ratings from other users.
 - **Offline Support**: Save places and guides for offline access.
-
-
-![Screenshot_20240919_195221](https://github.com/user-attachments/assets/980718ae-1a38-4679-81ee-4aecdf2255ca)
