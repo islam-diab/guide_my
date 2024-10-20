@@ -31,7 +31,7 @@ class HomeContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Find trusted service providers, \ndoctors and restaurants \nnear you with ease.',
+                  'اضف بسهولة مقدمي الخدمات \nوالأطباء والمطاعم الموثوق بهم \nبالقرب منك.',
                   style: AppTextStyles.font18WhiteNormal,
                 ),
                 const Expanded(
@@ -42,7 +42,7 @@ class HomeContainer extends StatelessWidget {
                     context.pushNamed(Routes.addLocationScreen);
                   },
                   child: Text(
-                    'Add location',
+                    'اضافة موقع',
                     style: AppTextStyles.font12Regular,
                   ),
                 ),
@@ -50,7 +50,7 @@ class HomeContainer extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 50.w,
+            left: 30.w,
             bottom: 20.h,
             child: Image.asset(
               AppAssets.map,

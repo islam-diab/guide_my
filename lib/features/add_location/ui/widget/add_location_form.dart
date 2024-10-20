@@ -16,7 +16,7 @@ class AddLocationForm extends StatelessWidget {
                 child: AppDropdownButton(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please select category';
+                      return 'برداء اختر نوع الخدمة';
                     }
                     return null;
                   },
@@ -29,12 +29,12 @@ class AddLocationForm extends StatelessWidget {
           verticalSpace(20.h),
           AppTextFormField(
             controller: context.read<AddLocationCubit>().nameController,
-            hintText: 'Location Name',
+            hintText: 'الاسم',
             keyboardType: TextInputType.name,
             textInputAction: TextInputAction.next,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter location name';
+                return 'برجاء ادخال اسم الموقع';
               }
               return null;
             },
@@ -42,12 +42,12 @@ class AddLocationForm extends StatelessWidget {
           verticalSpace(20.h),
           AppTextFormField(
             controller: context.read<AddLocationCubit>().phoneController,
-            hintText: 'Phone',
+            hintText: 'رقم الهاتف',
             keyboardType: TextInputType.phone,
             textInputAction: TextInputAction.next,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter phone number';
+                return 'برجاء ادخال رقم الهاتف';
               }
               return null;
             },
@@ -55,12 +55,12 @@ class AddLocationForm extends StatelessWidget {
           verticalSpace(20.h),
           AppTextFormField(
             controller: context.read<AddLocationCubit>().locationController,
-            hintText: 'Location Address',
+            hintText: 'العنوان',
             keyboardType: TextInputType.streetAddress,
             textInputAction: TextInputAction.next,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter location address';
+                return 'برجاء ادخال العنوان';
               }
               return null;
             },
@@ -68,12 +68,12 @@ class AddLocationForm extends StatelessWidget {
           verticalSpace(20.h),
           AppTextFormField(
             controller: context.read<AddLocationCubit>().mapController,
-            hintText: 'Location In Google Maps',
+            hintText: 'لينك الموقع من الخريطة',
             keyboardType: TextInputType.streetAddress,
             textInputAction: TextInputAction.next,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter location in google maps';
+                return 'برجاء ادخال لينك الموقع من الخريطة';
               }
               return null;
             },
@@ -81,13 +81,12 @@ class AddLocationForm extends StatelessWidget {
           verticalSpace(20.h),
           AppTextFormField(
             controller: context.read<AddLocationCubit>().descriptionController,
-            hintText: 'Description',
+            hintText: 'الوصف',
             keyboardType: TextInputType.streetAddress,
             textInputAction: TextInputAction.done,
           ),
           verticalSpace(50.h),
           const AddLocationButton(),
-       
         ],
       ),
     );

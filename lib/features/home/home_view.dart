@@ -18,24 +18,32 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              pinned: true,
-              floating: false,
-              toolbarHeight: 80.h,
-              title: AppTextFormField(
-                controller: TextEditingController(),
-                hintText: 'Search',
-                textInputAction: TextInputAction.search,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        body: SafeArea(
+          child: CustomScrollView(
+            slivers: [
+              SliverAppBar(
+                pinned: true,
+                floating: false,
+                toolbarHeight: 80.h,
+                title: AppTextFormField(
+                  controller: TextEditingController(),
+                  hintText: 'البحث',
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    color: AppColor.primary,
+                    size: 25,
+                  ),
+                  textInputAction: TextInputAction.search,
+                ),
               ),
-            ),
-            const SliverToBoxAdapter(child: HomeContainer()),
-            const SliverToBoxAdapter(child: CategoryBlocBuilder()),
-            const LocationBlocBuilder(),
-          ],
+              const SliverToBoxAdapter(child: HomeContainer()),
+              const SliverToBoxAdapter(child: CategoryBlocBuilder()),
+              const LocationBlocBuilder(),
+            ],
+          ),
         ),
       ),
     );

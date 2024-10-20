@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/theming/app_color.dart';
@@ -7,10 +6,7 @@ import 'package:guide_my/core/theming/app_text_styles.dart';
 class AppTextFormField extends StatelessWidget {
   final Function()? onTap;
   final Function(String)? onChanged;
-  final Function(String)? onFieldSubmitted;
   final String? hintText;
-  final int? maxLine;
-  final bool readOnly;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final bool isObscureText;
@@ -27,13 +23,10 @@ class AppTextFormField extends StatelessWidget {
     this.isObscureText = false,
     this.validator,
     required this.controller,
-    this.readOnly = false,
     this.onTap,
     this.keyboardType,
     this.textInputAction,
-    this.maxLine = 1,
     this.onChanged,
-    this.onFieldSubmitted,
   });
 
   @override
@@ -41,9 +34,6 @@ class AppTextFormField extends StatelessWidget {
     return TextFormField(
       onTap: onTap,
       onChanged: onChanged,
-      onFieldSubmitted: onFieldSubmitted,
-      maxLines: maxLine,
-      readOnly: readOnly,
       validator: validator,
       controller: controller,
       keyboardType: keyboardType,
@@ -56,7 +46,7 @@ class AppTextFormField extends StatelessWidget {
         hintText: hintText,
         label: Text(
           hintText ?? '',
-          style: AppTextStyles.font16RegularPrimary,
+          style: AppTextStyles.font18BoldPrimary,
         ),
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
@@ -64,35 +54,21 @@ class AppTextFormField extends StatelessWidget {
           horizontal: 20.w,
           vertical: 20.h,
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: AppColor.primary,
-            width: 1.3.w,
-          ),
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-            width: 1.3.w,
-          ),
-          borderRadius: BorderRadius.circular(16.0),
-        ),
+        focusedBorder: custtomOutlineInputBorder(AppColor.primary),
+        errorBorder: custtomOutlineInputBorder(Colors.red),
+        focusedErrorBorder: custtomOutlineInputBorder(Colors.red),
+        enabledBorder: custtomOutlineInputBorder(Colors.black),
       ),
+    );
+  }
+
+  OutlineInputBorder custtomOutlineInputBorder(Color color) {
+    return OutlineInputBorder(
+      borderSide: BorderSide(
+        color: color,
+        width: 1.3.w,
+      ),
+      borderRadius: BorderRadius.circular(16.0),
     );
   }
 }

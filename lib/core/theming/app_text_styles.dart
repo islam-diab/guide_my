@@ -3,10 +3,22 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/theming/app_color.dart';
 
 class AppTextStyles {
+  static const font35SemiBoldBlack = TextStyle(
+    fontSize: 35,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
+
   static const font30SemiBoldPurple = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.w600,
     color: AppColor.primary,
+  );
+
+  static const font25BoldWith = TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
   );
 
   static TextStyle font18DarkBlueBold = const TextStyle(
@@ -26,13 +38,13 @@ class AppTextStyles {
   );
 
   static TextStyle font12Regular = TextStyle(
-    fontSize: 12.sp,
-    fontWeight: FontWeight.normal,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
   );
 
-  static TextStyle font16RegularPrimary = TextStyle(
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w500,
+  static TextStyle font18BoldPrimary = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w900,
     color: AppColor.primary,
   );
 
@@ -45,5 +57,11 @@ class AppTextStyles {
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,
     color: Colors.grey,
+  );
+
+  static TextStyle font14WiteMedium = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
   );
 }

@@ -33,8 +33,8 @@ class AddLocationButton extends StatelessWidget {
             },
             isSelected: true,
             child: Text(
-              'Add Location',
-              style: AppTextStyles.font16SemiBold.copyWith(
+              'اضافة',
+              style: AppTextStyles.font18DarkBlueBold.copyWith(
                 color: Colors.white,
               ),
             ),

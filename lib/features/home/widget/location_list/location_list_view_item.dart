@@ -112,18 +112,4 @@ class LocationListViewItem extends StatelessWidget {
   }
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: 'http://via.placeholder.com/350x150',
-      placeholder: (context, url) => const AppShimmer(
-        height: 30,
-        width: 30,
-        radius: 15,
-      ),
-    );
-  }
-}
