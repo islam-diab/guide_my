@@ -21,7 +21,6 @@ class LocationListView extends StatelessWidget {
                 context.pushNamed(
                   Routes.locationView,
                   arguments: locationModel[index],
-                  
                 );
               },
               child: LocationListViewItem(locationModel: locationModel[index]));

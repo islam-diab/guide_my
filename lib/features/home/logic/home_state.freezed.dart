@@ -101,6 +101,9 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -117,6 +120,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -249,6 +255,9 @@ class __$$HomeLoadingImplCopyWithImpl<$Res>
   __$$HomeLoadingImplCopyWithImpl(
       _$HomeLoadingImpl _value, $Res Function(_$HomeLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -384,6 +393,8 @@ class __$$CategoryErrorImplCopyWithImpl<$Res>
       _$CategoryErrorImpl _value, $Res Function(_$CategoryErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -422,7 +433,9 @@ class _$CategoryErrorImpl implements CategoryError {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryErrorImplCopyWith<_$CategoryErrorImpl> get copyWith =>
@@ -525,7 +538,10 @@ abstract class CategoryError implements HomeState {
   const factory CategoryError(final String error) = _$CategoryErrorImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryErrorImplCopyWith<_$CategoryErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -547,6 +563,8 @@ class __$$LocationErrorImplCopyWithImpl<$Res>
       _$LocationErrorImpl _value, $Res Function(_$LocationErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -585,7 +603,9 @@ class _$LocationErrorImpl implements LocationError {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationErrorImplCopyWith<_$LocationErrorImpl> get copyWith =>
@@ -688,7 +708,10 @@ abstract class LocationError implements HomeState {
   const factory LocationError(final String error) = _$LocationErrorImpl;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationErrorImplCopyWith<_$LocationErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -710,6 +733,8 @@ class __$$HomeSuccessImplCopyWithImpl<$Res>
       _$HomeSuccessImpl _value, $Res Function(_$HomeSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -755,7 +780,9 @@ class _$HomeSuccessImpl implements HomeSuccess {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_position));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HomeSuccessImplCopyWith<_$HomeSuccessImpl> get copyWith =>
@@ -859,7 +886,10 @@ abstract class HomeSuccess implements HomeState {
       _$HomeSuccessImpl;
 
   List<LocationModel> get position;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeSuccessImplCopyWith<_$HomeSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -878,6 +908,9 @@ class __$$ImageLoadingImplCopyWithImpl<$Res>
   __$$ImageLoadingImplCopyWithImpl(
       _$ImageLoadingImpl _value, $Res Function(_$ImageLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1013,6 +1046,8 @@ class __$$ImageSuccessImplCopyWithImpl<$Res>
       _$ImageSuccessImpl _value, $Res Function(_$ImageSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1051,7 +1086,9 @@ class _$ImageSuccessImpl implements ImageSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImageSuccessImplCopyWith<_$ImageSuccessImpl> get copyWith =>
@@ -1154,7 +1191,10 @@ abstract class ImageSuccess implements HomeState {
   const factory ImageSuccess(final String image) = _$ImageSuccessImpl;
 
   String get image;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImageSuccessImplCopyWith<_$ImageSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

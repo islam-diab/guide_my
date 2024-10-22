@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/home/logic/home_cubit.dart';
 import 'package:guide_my/features/home/logic/home_state.dart';
 import 'package:guide_my/features/home/widget/location_list/location_list_view.dart';
@@ -35,7 +36,7 @@ class LocationBlocBuilder extends StatelessWidget {
   }
 }
 
-Widget setupSucces(doctorList) {
+Widget setupSucces(List<LocationModel> doctorList) {
   return LocationListView(
     locationModel: doctorList,
   );

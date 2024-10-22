@@ -53,6 +53,11 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
   );
 
+   static TextStyle font16DarkBlueNormal = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.normal,
+  );
+
   static TextStyle font14GrayMedium = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,

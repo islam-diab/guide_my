@@ -35,7 +35,7 @@ class HomeContainer extends StatelessWidget {
                   style: AppTextStyles.font18WhiteNormal,
                 ),
                 const Expanded(
-                  child: SizedBox(),
+                  child: SizedBox.shrink(),
                 ),
                 ElevatedButton(
                   onPressed: () {

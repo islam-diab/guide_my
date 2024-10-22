@@ -18,23 +18,20 @@ class CategoryModelAdapter extends TypeAdapter<CategoryModel> {
     };
     return CategoryModel(
       id: fields[0] as int,
-      group: fields[1] as String,
-      name: fields[2] as String,
-      image: fields[3] as String,
+      name: fields[1] as String,
+      image: fields[2] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, CategoryModel obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.group)
-      ..writeByte(2)
       ..write(obj.name)
-      ..writeByte(3)
+      ..writeByte(2)
       ..write(obj.image);
   }
 

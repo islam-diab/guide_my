@@ -60,23 +60,22 @@ class LocationListViewItem extends StatelessWidget {
                   style: AppTextStyles.font16DarkBlueBold,
                 ),
                 verticalSpace(5),
-                Padding(
-                  padding: const EdgeInsets.only(right: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        locationModel.location,
-                        style: AppTextStyles.font16DarkBlueBold,
-                      ),
-                      ImageBottom(
-                        onTap: () {
-                          context.read<HomeCubit>().openLocation();
-                        },
-                        image: AppAssets.map,
-                      )
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      locationModel.location,
+                      style: AppTextStyles.font16DarkBlueNormal,
+                    ),
+                    ImageBottom(
+                      onTap: () {
+                        context
+                            .read<HomeCubit>()
+                            .openLocation(locationModel.locationInGoogleMaps);
+                      },
+                      image: AppAssets.map,
+                    )
+                  ],
                 ),
                 verticalSpace(10),
                 Row(
@@ -111,5 +110,3 @@ class LocationListViewItem extends StatelessWidget {
     );
   }
 }
-
-
