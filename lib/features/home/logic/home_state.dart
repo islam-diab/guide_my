@@ -8,12 +8,17 @@ class HomeState with _$HomeState {
   const factory HomeState.homeLoading() = HomeLoading;
 
   const factory HomeState.catregoryError(String error) = CategoryError;
-  const factory HomeState.categorySuccess() = CategorySuccess;
 
   const factory HomeState.locationError(String error) = LocationError;
-  const factory HomeState.locationSuccess(List<LocationModel> position) =
-      LocationSuccess;
+  const factory HomeState.homeSuccess(List<LocationModel> position) =
+      HomeSuccess;
 
   const factory HomeState.imageLoading() = ImageLoading;
   const factory HomeState.imageSuccess(String image) = ImageSuccess;
+
+  const factory HomeState.searchLoading() = SearchLoading;
+  const factory HomeState.searchSuccess(List<LocationModel> position) =
+      SearchSuccess;
+
+  const factory HomeState.searchError(String error) = SearchError;
 }

@@ -14,8 +14,8 @@ class ProfilePic extends StatelessWidget {
         fit: StackFit.expand,
         clipBehavior: Clip.none,
         children: [
-          CircleAvatar(
-            backgroundImage: NetworkImage(context.read<HomeCubit>().photoURL),
+          const CircleAvatar(
+            backgroundColor: Colors.amber,
           ),
           Positioned(
             right: -16,

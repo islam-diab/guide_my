@@ -6,6 +6,7 @@ import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/helper/extensions.dart';
 import 'package:guide_my/core/helper/spase.dart';
 import 'package:guide_my/core/routing/routes.dart';
+import 'package:guide_my/core/theming/app_color.dart';
 import 'package:guide_my/core/theming/app_text_styles.dart';
 import 'package:guide_my/core/widget/app_out_line_button.dart';
 import 'package:guide_my/core/widget/text_form_field.dart';
@@ -23,16 +24,26 @@ class AddLocationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Add Location'),
-          centerTitle: true,
-        ),
-        body: const SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(30.0),
-            child: AddLocationForm(),
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: AppColor.primary,
+            title: const Text(
+              'اضافة موقع جديد',
+              style: AppTextStyles.font25BoldWith,
+            ),
+            iconTheme: const IconThemeData(
+              color: Colors.white,
+            ),
+            centerTitle: true,
+          ),
+          body: const SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.all(30.0),
+              child: AddLocationForm(),
+            ),
           ),
         ),
       ),

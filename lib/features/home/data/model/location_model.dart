@@ -1,11 +1,24 @@
+import 'package:hive_flutter/hive_flutter.dart';
+
+part 'location_model.g.dart';
+
+@HiveType(typeId: 2)
 class LocationModel {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final String name;
+  @HiveField(2)
   final String phone;
+  @HiveField(3)
   final String category;
+  @HiveField(4)
   final String image;
+  @HiveField(5)
   final String description;
+  @HiveField(6)
   final String location;
+  @HiveField(7)
   final String locationInGoogleMaps;
 
   LocationModel({

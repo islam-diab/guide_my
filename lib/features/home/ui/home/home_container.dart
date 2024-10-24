@@ -10,8 +10,8 @@ class HomeContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 190.h,
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -31,18 +31,18 @@ class HomeContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Find trusted service providers, \ndoctors and restaurants \nnear you with ease.',
+                  'اضف بسهولة مقدمي الخدمات \nوالأطباء والمطاعم الموثوق بهم \nبالقرب منك.',
                   style: AppTextStyles.font18WhiteNormal,
                 ),
                 const Expanded(
-                  child: SizedBox(),
+                  child: SizedBox.shrink(),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     context.pushNamed(Routes.addLocationScreen);
                   },
                   child: Text(
-                    'Add location',
+                    'اضافة موقع',
                     style: AppTextStyles.font12Regular,
                   ),
                 ),
@@ -50,7 +50,7 @@ class HomeContainer extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 50.w,
+            left: 30.w,
             bottom: 20.h,
             child: Image.asset(
               AppAssets.map,

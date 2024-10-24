@@ -1,5 +1,7 @@
 part of '../../home_view.dart';
 
+
+
 class CategoriesListViewItem extends StatelessWidget {
   final CategoryModel? categories;
   final int itemIndex;

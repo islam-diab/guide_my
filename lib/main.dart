@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:guide_my/core/helper/app_constants.dart';
 import 'package:guide_my/core/model/app_user.dart';
 import 'package:guide_my/core/routing/app_router.dart';
@@ -9,6 +10,7 @@ import 'package:guide_my/core/routing/routes.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'features/home/data/model/location_model.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -22,6 +24,9 @@ void main() async {
 
   Hive.registerAdapter(CategoryModelAdapter());
   await Hive.openBox<CategoryModel>(HiveKeys.category);
+
+  Hive.registerAdapter(LocationModelAdapter());
+  await Hive.openBox<LocationModel>(HiveKeys.location);
 
   runApp(MyApp(
     appRouter: AppRouter(),
@@ -40,6 +45,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          textTheme: GoogleFonts.rubikTextTheme(),
           useMaterial3: true,
         ),
         initialRoute: _checkIfUserIsLoggedIn(),

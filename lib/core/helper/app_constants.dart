@@ -10,6 +10,8 @@ class HiveKeys {
   static const String appUser = 'appUser';
 
   static const String category = 'category';
+
+  static const String location = 'location';
 }
 
 class FirebaseKeys {

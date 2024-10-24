@@ -8,15 +8,16 @@ class LocationShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
+    return SliverPadding(
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+      sliver: SliverList.builder(
         itemCount: 10,
         itemBuilder: (context, index) {
           return Container(
             margin: EdgeInsets.only(bottom: 16.h),
             child: Row(
               children: [
-                const AppShimmer(height: 110, width: 120, radius: 12),
+                const AppShimmer(height: 110, width: 110, radius: 12),
                 horizontalSpace(16),
                 Expanded(
                   child: Column(

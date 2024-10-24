@@ -26,17 +26,17 @@ class ImageView extends StatelessWidget {
               : CircleAvatar(
                   backgroundColor: Colors.grey[500],
                   radius: 40,
-                  child: const Center(
+                  child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.cloud_upload_outlined,
                           color: Colors.white,
                         ),
                         Text(
-                          'Upload Image',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
+                          'اضافة صورة',
+                          style: AppTextStyles.font14WiteMedium,
                         ),
                       ],
                     ),

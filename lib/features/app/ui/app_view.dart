@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guide_my/core/theming/app_color.dart';
-import 'package:guide_my/features/home/home_view.dart';
+import 'package:guide_my/features/home/ui/home_view.dart';
 import 'package:guide_my/features/profile/profile_sceen.dart';
 
 class AppView extends StatefulWidget {

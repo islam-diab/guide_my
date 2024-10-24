@@ -48,8 +48,8 @@ class _AppDropdownButtonState extends State<AppDropdownButton> {
           // isExpanded: true,
           validator: widget.validator,
           hint: Text(
-            'Select Item',
-            style: AppTextStyles.font16RegularPrimary,
+            'نوع الخدمة',
+            style: AppTextStyles.font18BoldPrimary,
           ),
           items: items
               .map((item) => DropdownMenuItem(
