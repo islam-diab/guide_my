@@ -7,7 +7,9 @@ import 'package:guide_my/features/auth/ui/auth_view.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/home/logic/home_cubit.dart';
 import 'package:guide_my/features/app/ui/app_view.dart';
-import 'package:guide_my/features/location_view/widget/location_view.dart';
+import 'package:guide_my/features/location_view/ui/location_view.dart';
+import 'package:guide_my/features/search/logic/search_cubit.dart';
+import 'package:guide_my/features/search/search_view.dart';
 
 import '../../features/auth/logic/auth_cubit.dart';
 
@@ -42,6 +44,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => LocationView(
             locationModel: argument as LocationModel,
+          ),
+        );
+
+      case Routes.searchView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => SearchCubit(),
+            child: const SearchView(),
           ),
         );
 

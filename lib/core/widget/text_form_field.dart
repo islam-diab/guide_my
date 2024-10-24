@@ -13,7 +13,7 @@ class AppTextFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
   final String? Function(String?)? validator;
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   const AppTextFormField({
     super.key,
@@ -22,7 +22,7 @@ class AppTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.isObscureText = false,
     this.validator,
-    required this.controller,
+    this.controller,
     this.onTap,
     this.keyboardType,
     this.textInputAction,
@@ -33,6 +33,7 @@ class AppTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onTap: onTap,
+      readOnly: onTap != null ? true : false,
       onChanged: onChanged,
       validator: validator,
       controller: controller,
@@ -44,10 +45,6 @@ class AppTextFormField extends StatelessWidget {
         isDense: true,
         hintStyle: AppTextStyles.font16SemiBold,
         hintText: hintText,
-        label: Text(
-          hintText ?? '',
-          style: AppTextStyles.font18BoldPrimary,
-        ),
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         contentPadding: EdgeInsets.symmetric(

@@ -21,7 +21,7 @@ class AppTextStyles {
     color: Colors.white,
   );
 
-  static TextStyle font18DarkBlueBold = const TextStyle(
+  static const TextStyle font18DarkBlueBold =  TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w700,
   );

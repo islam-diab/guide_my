@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/features/home/logic/home_cubit.dart';
 import 'package:guide_my/features/home/logic/home_state.dart';
-import 'package:guide_my/features/home/widget/category/categories_list_view.dart';
-import 'package:guide_my/features/home/widget/category/category_shimmer.dart';
+import 'package:guide_my/features/home/ui/home/category/categories_list_view.dart';
+import 'package:guide_my/features/home/ui/home/category/category_shimmer.dart';
 
 class CategoryBlocBuilder extends StatelessWidget {
   const CategoryBlocBuilder({super.key});

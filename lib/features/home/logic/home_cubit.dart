@@ -6,10 +6,10 @@ import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/home/logic/home_state.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(const HomeState.initial());
+
   final AppRepository appRepository = AppRepository();
 
   void fetchAllData() async {
@@ -17,14 +17,14 @@ class HomeCubit extends Cubit<HomeState> {
 
     await Future.wait([
       getCategoriesAndSaveItInHive(),
-      getLocations(),
+      getLocationsAndSaveItInHive(),
     ]);
   }
 
   List<LocationModel> locationModel = [];
   List<LocationModel> filteredLocation = [];
 
-  Future<void> getLocations() async {
+  Future<void> getLocationsAndSaveItInHive() async {
     ApiResult result = await appRepository.getPositionsFromFirebase();
 
     if (result.isError) {
@@ -32,22 +32,13 @@ class HomeCubit extends Cubit<HomeState> {
     } else {
       locationModel = result.value;
       emit(HomeState.homeSuccess(locationModel));
-    }
-  }
 
-  void filterLocationByCategory(String categoryName) {
-    print(categoryName);
-    print(locationModel);
+      var location = Hive.box<LocationModel>(HiveKeys.location);
+      await location.clear();
 
-    if (categoryName == 'الكل') {
-      emit(HomeState.homeSuccess(locationModel));
-    } else {
-      filteredLocation = locationModel
-          .where((element) => element.category == categoryName)
-          .toList();
-      print(filteredLocation);
-
-      emit(HomeState.homeSuccess(filteredLocation));
+      for (var element in result.value) {
+        await location.add(element);
+      }
     }
   }
 
@@ -65,17 +56,15 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  void openWhatsApp(String phoneNumber) async {
-    String whatsappUrl = "whatsapp://send?phone=$phoneNumber";
-    launchUrl(Uri.parse(whatsappUrl));
-  }
+  void filterLocationByCategory(String categoryName) {
+    if (categoryName == 'الكل') {
+      emit(HomeState.homeSuccess(locationModel));
+    } else {
+      filteredLocation = locationModel
+          .where((element) => element.category == categoryName)
+          .toList();
 
-  void openCall(String phoneNumber) async {
-    String callNumber = "tel://$phoneNumber";
-    launchUrl(Uri.parse(callNumber));
-  }
-
-  openLocation(String googleMapUrl) async {
-    launchUrl(Uri.parse(googleMapUrl));
+      emit(HomeState.homeSuccess(filteredLocation));
+    }
   }
 }

@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/home/logic/home_cubit.dart';
 import 'package:guide_my/features/home/logic/home_state.dart';
-import 'package:guide_my/features/home/widget/location_list/location_list_view.dart';
-import 'package:guide_my/features/home/widget/location_list/location_shimmer.dart';
+import 'package:guide_my/features/home/ui/home/location_list/location_list_view.dart';
+import 'package:guide_my/features/home/ui/home/location_list/location_shimmer.dart';
 
 class LocationBlocBuilder extends StatelessWidget {
   const LocationBlocBuilder({super.key});

@@ -10,6 +10,7 @@ import 'package:guide_my/core/routing/routes.dart';
 import 'package:guide_my/features/home/data/model/category_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'features/home/data/model/location_model.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -23,6 +24,9 @@ void main() async {
 
   Hive.registerAdapter(CategoryModelAdapter());
   await Hive.openBox<CategoryModel>(HiveKeys.category);
+
+  Hive.registerAdapter(LocationModelAdapter());
+  await Hive.openBox<LocationModel>(HiveKeys.location);
 
   runApp(MyApp(
     appRouter: AppRouter(),
