@@ -4,8 +4,10 @@ import 'package:guide_my/core/functions/url.dart';
 import 'package:guide_my/core/helper/spase.dart';
 import 'package:guide_my/core/theming/app_color.dart';
 import 'package:guide_my/core/theming/app_text_styles.dart';
+import 'package:guide_my/core/widget/app_cached_network_image.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
 import 'package:guide_my/features/location_view/ui/widget/custtom_list_tile.dart';
+import 'package:guide_my/features/location_view/ui/widget/favorite_icon.dart';
 
 part 'widget/location_view_body.dart';
 part 'widget/location_info.dart';
@@ -25,16 +27,15 @@ class LocationView extends StatelessWidget {
             SliverAppBar(
               pinned: true,
               expandedHeight: 300.h,
-              flexibleSpace: FlexibleSpaceBar(
-                  background: Image.network(
-                locationModel.image,
-                fit: BoxFit.cover,
-              )),
+              flexibleSpace: AppCachedNetworkImage(
+                imageUrl: locationModel.image,
+              ),
             ),
             SliverToBoxAdapter(
-                child: LocationViewBody(
-              locationModel: locationModel,
-            ))
+              child: LocationViewBody(
+                locationModel: locationModel,
+              ),
+            ),
           ],
         ),
       ),

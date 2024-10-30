@@ -1,11 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:guide_my/core/functions/url.dart';
 import 'package:guide_my/core/helper/app_assets.dart';
 import 'package:guide_my/core/helper/spase.dart';
 import 'package:guide_my/core/theming/app_text_styles.dart';
-import 'package:guide_my/core/widget/app_shimmer_from_colors.dart';
+import 'package:guide_my/core/widget/app_cached_network_image.dart';
 import 'package:guide_my/core/widget/image_bottom.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
 
@@ -34,34 +32,10 @@ class LocationListViewItem extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: CachedNetworkImage(
+              child: AppCachedNetworkImage(
                 imageUrl: locationModel.image,
-                placeholder: (context, url) {
-                  return const AppShimmer(
-                    height: 110,
-                    width: 110,
-                    radius: 12,
-                  );
-                },
-                errorWidget: (context, url, error) => SizedBox(
-                  height: 110.h,
-                  width: 110.w,
-                  child: const Icon(
-                    Icons.error,
-                    color: Colors.red,
-                    size: 70,
-                  ),
-                ),
-                imageBuilder: (context, imageProvider) => Container(
-                  height: 110.h,
-                  width: 110.w,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: imageProvider,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
+                hight: 110,
+                width: 110,
               ),
             ),
             horizontalSpace(16),

@@ -16,7 +16,7 @@ class AddLocationForm extends StatelessWidget {
                 child: AppDropdownButton(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'برداء اختر نوع الخدمة';
+                      return 'برجاء اختر نوع الخدمة';
                     }
                     return null;
                   },
