@@ -6,7 +6,6 @@ import 'package:guide_my/core/widget/text_form_field.dart';
 import 'package:guide_my/features/search/logic/search_cubit.dart';
 import 'package:guide_my/features/search/logic/search_state.dart';
 import 'package:guide_my/features/home/data/model/location_model.dart';
-import 'package:guide_my/features/home/logic/home_state.dart';
 import 'package:guide_my/features/home/ui/home/location_list/location_list_view.dart';
 
 part 'widget/sliver_search_app_bar.dart';

@@ -11,10 +11,18 @@ class LocationViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            locationModel.name,
-            style: AppTextStyles.font30SemiBoldPurple
-                .copyWith(color: Colors.black),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                locationModel.name,
+                style: AppTextStyles.font30SemiBoldPurple
+                    .copyWith(color: Colors.black),
+              ),
+              FavoriteIcon(
+                locationModel: locationModel,
+              ),
+            ],
           ),
           verticalSpace(10),
           LocationInfo(locationModel: locationModel),

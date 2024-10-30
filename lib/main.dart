@@ -27,6 +27,7 @@ void main() async {
 
   Hive.registerAdapter(LocationModelAdapter());
   await Hive.openBox<LocationModel>(HiveKeys.location);
+  await Hive.openBox<LocationModel>(HiveKeys.faverote);
 
   runApp(MyApp(
     appRouter: AppRouter(),

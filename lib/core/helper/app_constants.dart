@@ -12,6 +12,7 @@ class HiveKeys {
   static const String category = 'category';
 
   static const String location = 'location';
+  static const String faverote = 'faverote';
 }
 
 class FirebaseKeys {
